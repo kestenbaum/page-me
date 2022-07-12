@@ -49,6 +49,63 @@
   background: #0d1117;
   width: 100%;
   padding: 50px;
+  margin-left: 100px;
+}
+
+/*---- About ----*/
+.person-block {
+  display: flex;
+  justify-content: space-between;
+  background: #161b22;
+  border: 2px solid rgba(80, 80, 80, 0.5);
+  border-radius: 15px;
+  padding: 25px;
+}
+
+.person-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.person-avatar {
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
+  background: #21a4f7;
+}
+
+.person-document {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.person-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: aliceblue;
+}
+
+.avatar {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 50%;
+}
+
+.skills-block {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 60%;
+}
+
+.skill-item {
+  display: flex;
+  justify-content: flex-start;
+  padding: 15px;
+  gap: 5px;
 }
 
 /*# sourceMappingURL=index.css.map */
