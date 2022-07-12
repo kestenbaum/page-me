@@ -37,6 +37,12 @@
   height: 100vh;
 }
 
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
 /*---- Page-Wrapper ----*/
 .page-wrapper {
   height: 100vh;
