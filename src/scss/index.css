@@ -73,7 +73,6 @@
   height: 250px;
   width: 250px;
   border-radius: 50%;
-  background: #21a4f7;
 }
 
 .person-document {
@@ -103,6 +102,7 @@
 
 .skill-item {
   display: flex;
+  align-items: center;
   justify-content: flex-start;
   padding: 15px;
   gap: 5px;

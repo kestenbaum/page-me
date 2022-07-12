@@ -1,8 +1,11 @@
-import React from 'react';
+import React, {FC} from 'react';
 import avatar from './../../assets/images/me.png'
+import {useTypeSelector} from "../../hooks/useTypedSelector";
+import SkillItem from "../SkillItem";
 
+const About:FC = () => {
+    const data = useTypeSelector(item => item.skills.data)
 
-const About = () => {
     return (
         <div className='about'>
             <div className='person-block'>
@@ -17,7 +20,15 @@ const About = () => {
                 </div>
             <div className='skills-block'>
                 <div className='person-title'>Skills:</div>
-
+                <div>
+                    {data.map(item => {
+                       return <SkillItem
+                            key={item.id}
+                            skill={item.skill}
+                            component={item.components}
+                        />
+                    })}
+                </div>
             </div>
             </div>
         </div>
