@@ -1,14 +1,10 @@
 import React from 'react';
-import {NavLink, Route, Routes} from "react-router-dom";
+import {NavLink} from "react-router-dom";
 import Icon from "./UI/icon/Icon";
 import {AiFillHome} from "react-icons/ai";
 import {SiAboutdotme} from "react-icons/si";
 import {MdOutlineContactMail, MdWork} from "react-icons/md";
 import {FaGithub} from "react-icons/fa";
-import {Home} from "./pages/Home";
-import About from "./pages/About";
-import Contact from "./pages/Contact";
-import Work from "./pages/Work";
 
 const Navigation = () => {
     return (
@@ -51,13 +47,6 @@ const Navigation = () => {
                     children={<FaGithub/>}
                 />
             </a>
-
-            <Routes>
-                <Route path='/' element={<Home/>}/>
-                <Route path='/about' element={<About/>}/>
-                <Route path='/contact' element={<Contact/>}/>
-                <Route path='/work' element={<Work/>}/>
-            </Routes>
         </div>
     );
 };
