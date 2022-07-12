@@ -1,0 +1,45 @@
+@import "variables";
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container{
+  width: 100%;
+  max-width: 1280px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+/*---- layout----*/
+.layout{
+  background: $base-color;
+}
+.layout-wrapper{
+  display: flex;
+}
+
+/*---- Sidebar ----*/
+.sidebar{
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  background: $header-color;
+  height: 100vh;
+}
+
+/*---- Page-Wrapper ----*/
+.page-wrapper{
+  height: 100vh;
+  background: $base-color;
+  width: 100%;
+}
