@@ -49,6 +49,23 @@
   padding: 50px;
   margin-left: 100px;
 }
+/*---- Home ----*/
+.home-page{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  height: 100%;
+}
+.home-title{
+  font-size: 36px;
+  color: white;
+  text-transform: uppercase;
+}
+.home-description{
+  font-size: 24px;
+  color: white;
+}
 /*---- About ----*/
 .person-block{
   display: flex;
