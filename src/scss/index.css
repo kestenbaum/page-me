@@ -80,6 +80,7 @@
 .person-block {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   background: #161b22;
   border: 2px solid rgba(80, 80, 80, 0.5);
   border-radius: 15px;
@@ -94,8 +95,6 @@
 }
 
 .person-avatar {
-  height: 250px;
-  width: 250px;
   border-radius: 50%;
 }
 
@@ -113,7 +112,7 @@
 
 .avatar {
   max-width: 100%;
-  max-height: 100%;
+  max-height: 250px;
   border-radius: 50%;
 }
 
@@ -147,6 +146,7 @@
 
 .block-work {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 20px;
 }
@@ -160,6 +160,7 @@
   border: 2px solid rgba(80, 80, 80, 0.5);
   border-radius: 15px;
   padding: 25px;
+  min-width: 250px;
 }
 
 .image-work {

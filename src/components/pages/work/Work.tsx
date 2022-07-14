@@ -20,7 +20,7 @@ const Work:FC = () => {
                         )
                 }
             </div>
-            <h3 className='title-work'>React/redux</h3>
+            <h3 className='title-work'>React/Redux</h3>
             <div className='block-work'>
                 <h2 className='title-work'>Работы пока отсутствуют!</h2>
             </div>
