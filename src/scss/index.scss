@@ -12,7 +12,9 @@
   padding: 0 15px;
   margin: 0 auto;
 }
-
+.link{
+  text-decoration: none;
+}
 /*---- layout----*/
 .layout{
   background: $base-color;
@@ -43,7 +45,7 @@
 }
 /*---- Page-Wrapper ----*/
 .page-wrapper{
-  height: 100vh;
+  min-height: 100vh;
   background: $base-color;
   width: 100%;
   padding: 50px;
@@ -113,4 +115,31 @@
   justify-content: flex-start;
   padding: 15px;
   gap:5px;
+}
+
+/*---- work page ----*/
+.work-page{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.title-work{
+  font-size: 20px;
+  font-weight: bold;
+  color: aliceblue;
+}
+.block-work{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.card-work{
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 30%;
+  gap: 20px;
+  background: $header-color;
+  border: 2px solid $gray-50;
+  border-radius: 15px;
+  padding: 25px;
 }

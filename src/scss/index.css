@@ -12,6 +12,10 @@
   margin: 0 auto;
 }
 
+.link {
+  text-decoration: none;
+}
+
 /*---- layout----*/
 .layout {
   background: #0d1117;
@@ -45,7 +49,7 @@
 
 /*---- Page-Wrapper ----*/
 .page-wrapper {
-  height: 100vh;
+  min-height: 100vh;
   background: #0d1117;
   width: 100%;
   padding: 50px;
@@ -126,6 +130,36 @@
   justify-content: flex-start;
   padding: 15px;
   gap: 5px;
+}
+
+/*---- work page ----*/
+.work-page {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.title-work {
+  font-size: 20px;
+  font-weight: bold;
+  color: aliceblue;
+}
+
+.block-work {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card-work {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 30%;
+  gap: 20px;
+  background: #161b22;
+  border: 2px solid rgba(80, 80, 80, 0.5);
+  border-radius: 15px;
+  padding: 25px;
 }
 
 /*# sourceMappingURL=index.css.map */

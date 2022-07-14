@@ -3,7 +3,7 @@ import {Route, Routes} from "react-router-dom";
 import {Home} from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
-import Work from "./pages/Work";
+import Work from "./pages/work/Work";
 
 const PageWrapper:FC = () => {
     return (
