@@ -1,8 +1,10 @@
 import {combineReducers, createStore} from "redux";
 import {reducerSkill} from "./reducer/skillReducer/reducerSkill";
+import {reducerWork} from "./reducer/workReducer/reducerWork";
 
 const rootReducer = combineReducers({
-    skills: reducerSkill
+    skills: reducerSkill,
+    workPage: reducerWork
 })
 
 

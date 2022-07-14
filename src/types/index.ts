@@ -10,3 +10,10 @@ export interface IState {
 export interface ISkill {
     data: any[]
 }
+
+export interface IStateWork {
+    id: number
+    title: string
+    img: any
+    link: string
+}

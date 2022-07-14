@@ -162,4 +162,11 @@
   padding: 25px;
 }
 
+.image-work {
+  width: 100%;
+  height: 100%;
+  max-width: 250px;
+  max-height: 200px;
+}
+
 /*# sourceMappingURL=index.css.map */
