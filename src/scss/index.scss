@@ -150,3 +150,24 @@
   max-width: 250px;
   max-height: 200px;
 }
+
+/*---- contact ----*/
+.contact-page{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.contact-block{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: $header-color;
+  border: 2px solid $gray-50;
+  border-radius: 15px;
+  padding: 25px;
+}
+.contact-link{
+  font-size: 20px;
+  color: #fff;
+  text-decoration: none;
+}
