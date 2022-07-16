@@ -1,6 +1,8 @@
 import React, {FC} from 'react';
 import Icon from "../../UI/icon/Icon";
 import {FaTelegramPlane} from 'react-icons/fa'
+import {BsPhone} from 'react-icons/bs'
+import {SiGmail} from 'react-icons/si'
 
 const Contact:FC = () => {
     return (
@@ -18,9 +20,17 @@ const Contact:FC = () => {
                 <Icon
                     color={'white'}
                     size={'1.5em'}
-                    children={<FaTelegramPlane />}
+                    children={<SiGmail />}
                 />
-                <span className='contact-link'>Telegram: @alexey_vvn</span>
+                <a href="mailto:kespa71for@gmail.com" className='contact-link'>Gmail: kespa71for@gmail.com</a>
+            </div>
+            <div className='contact-block'>
+                <Icon
+                    color={'white'}
+                    size={'1.5em'}
+                    children={<BsPhone />}
+                />
+                <a href='tel:380666053013' className='contact-link'>Phone: +380666053013</a>
             </div>
         </div>
     );
