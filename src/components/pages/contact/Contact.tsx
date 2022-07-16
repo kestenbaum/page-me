@@ -7,7 +7,7 @@ import ContactBlock from "./ContactBlock";
 const Contact:FC = () => {
 
     const [state, setState] = useState([
-        {id: 1, component: <FaTelegramPlane/>, contact: "Telegram: @alexey_vvn", href: "javascript:void(0)"},
+        {id: 1, component: <FaTelegramPlane/>, contact: "Telegram: @alexey_vvn", href: "#"},
         {id: 2, component: <SiGmail/>, contact: "Gmail: kespa71for@gmail.com", href: "mailto:kespa71for@gmail.com"},
         {id: 3, component: <BsPhone/>, contact: "Mobile Phone: +380666053013", href: 'tel:380666053013'},
     ])
