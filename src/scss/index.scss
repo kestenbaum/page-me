@@ -181,10 +181,11 @@
 
 @media all and (max-width: 680px){
   .sidebar{
-    left: 100%;
+    left: -100px;
+    transition-duration: .5s;
   }
   .page-wrapper{
-    margin: 0;
+    margin: 50px 0 0;
   }
   .contact-block{
     overflow-wrap: anywhere;
