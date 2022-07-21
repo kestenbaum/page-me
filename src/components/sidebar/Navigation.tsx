@@ -1,12 +1,13 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {NavLink} from "react-router-dom";
-import Icon from "./UI/icon/Icon";
+import Icon from "../UI/icon/Icon";
 import {AiFillHome} from "react-icons/ai";
 import {SiAboutdotme} from "react-icons/si";
 import {MdOutlineContactMail, MdWork} from "react-icons/md";
 import {FaGithub} from "react-icons/fa";
 
 const Navigation = () => {
+
     return (
         <div className='nav'>
             <NavLink

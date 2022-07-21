@@ -18,6 +18,7 @@
 
 /*---- layout----*/
 .layout {
+  position: relative;
   background: #0d1117;
 }
 
@@ -39,6 +40,10 @@
   align-items: center;
   background: #161b22;
   height: 100vh;
+}
+
+.sidebarActive {
+  left: 0 !important;
 }
 
 .nav {
@@ -191,6 +196,29 @@
   font-size: 20px;
   color: #fff;
   text-decoration: none;
+}
+
+/*---- media ----*/
+@media all and (max-width: 680px) {
+  .sidebar {
+    left: 100%;
+  }
+
+  .page-wrapper {
+    margin: 0;
+  }
+
+  .contact-block {
+    overflow-wrap: anywhere;
+  }
+
+  .page-wrapper {
+    padding: 20px;
+  }
+
+  .burgerWrapper {
+    display: flex;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

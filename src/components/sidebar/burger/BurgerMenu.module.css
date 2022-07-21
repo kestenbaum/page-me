@@ -1,0 +1,42 @@
+/*---- burger ----*/
+.burgerWrapper {
+    position: fixed;
+    top: 25px;
+    left: 25px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 20px;
+    width: 20px;
+    background: transparent;
+    border: none;
+    z-index: 999;
+}
+
+.burger {
+    display: block;
+    height: 3px;
+    width: 20px;
+    background: #fff;
+    cursor: pointer;
+}
+
+.burger::after{
+     position: absolute;
+     content: '';
+     transform: translateY(5px);
+     left: 0;
+     height: 3px;
+     width: 20px;
+     background: #fff;
+ }
+
+.burger::before{
+     position: absolute;
+     content: '';
+     transform: translateY(-5px);
+     left: 0;
+     height: 3px;
+     width: 20px;
+     background: #fff;
+ }

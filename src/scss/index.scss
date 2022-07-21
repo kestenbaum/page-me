@@ -17,6 +17,7 @@
 }
 /*---- layout----*/
 .layout{
+  position: relative;
   background: $base-color;
 }
 .layout-wrapper{
@@ -38,11 +39,15 @@
   background: $header-color;
   height: 100vh;
 }
+.sidebarActive{
+  left: 0 !important;
+}
 .nav{
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
+
 /*---- Page-Wrapper ----*/
 .page-wrapper{
   min-height: 100vh;
@@ -170,4 +175,24 @@
   font-size: 20px;
   color: #fff;
   text-decoration: none;
+}
+
+/*---- media ----*/
+
+@media all and (max-width: 680px){
+  .sidebar{
+    left: 100%;
+  }
+  .page-wrapper{
+    margin: 0;
+  }
+  .contact-block{
+    overflow-wrap: anywhere;
+  }
+  .page-wrapper{
+    padding: 20px;
+  }
+  .burgerWrapper{
+    display: flex;
+  }
 }

@@ -17,3 +17,8 @@ export interface IStateWork {
     img: any
     link: string
 }
+
+export interface IBurgerMenu {
+    state: boolean
+    setState: any
+}

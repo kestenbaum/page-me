@@ -2,9 +2,13 @@ import React, {FC} from 'react';
 import Navigation from "./Navigation";
 
 
-const Sidebar:FC = () => {
+interface ISidebar {
+    classes: any
+}
+
+const Sidebar:FC<ISidebar> = ({classes}) => {
     return (
-        <div className='sidebar'>
+        <div className={classes.join(' ')}>
            <Navigation/>
         </div>
     );
