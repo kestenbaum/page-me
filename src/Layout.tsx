@@ -2,17 +2,20 @@ import React, {useEffect, useState} from 'react';
 import BurgerMenu from "./components/sidebar/burger/BurgerMenu";
 import Sidebar from "./components/sidebar/Sidebar";
 import PageWrapper from "./components/PageWrapper";
+import {useTypeSelector} from "./hooks/useTypedSelector";
+import {useDispatch} from "react-redux";
+import {actionAddClassSidebar, actionRemoveClassSidebar} from "./store/reducer/sidebarReducer/actionSidebar";
 
 const Layout = () => {
-
     const [state, setState] = useState<boolean>(false)
-    const [classes, setClasses] = useState<any>(['sidebar'])
+    const classes = useTypeSelector(item => item.sidebar.sidebarClass)
+    const dispatch = useDispatch()
 
     useEffect(() => {
         if (state) {
-            setClasses([...classes, 'sidebarActive'])
+            dispatch(actionAddClassSidebar('sidebarActive'))
         } else {
-            setClasses(['sidebar'])
+            dispatch(actionRemoveClassSidebar('sidebarActive'))
         }
     }, [state])
 

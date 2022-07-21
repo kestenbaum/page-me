@@ -5,6 +5,8 @@ import {IBurgerMenu} from "../../../types";
 const BurgerMenu:FC<IBurgerMenu> = ({state, setState}) => {
     const rootClasses = [style.burger]
 
+
+
     return (
         <button
             className={style.burgerWrapper}

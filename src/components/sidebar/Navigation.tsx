@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {FC} from 'react';
 import {NavLink} from "react-router-dom";
 import Icon from "../UI/icon/Icon";
 import {AiFillHome} from "react-icons/ai";
@@ -6,35 +6,41 @@ import {SiAboutdotme} from "react-icons/si";
 import {MdOutlineContactMail, MdWork} from "react-icons/md";
 import {FaGithub} from "react-icons/fa";
 
-const Navigation = () => {
+const Navigation:FC = () => {
 
     return (
         <div className='nav'>
             <NavLink
                 to='/'
             >
-                <Icon
-                    color={'white'}
-                    children={<AiFillHome />}
-                    size={'1.5em'}
-                />
+                    <Icon
+                        color={'white'}
+                        children={<AiFillHome />}
+                        size={'1.5em'}
+                    />
             </NavLink>
 
-            <NavLink to='/about'>
+            <NavLink
+                to='/about'
+            >
                 <Icon
                     color={'white'}
                     children={<SiAboutdotme />}
                     size={'1.5em'}
                 />
             </NavLink>
-            <NavLink to='/work'>
+            <NavLink
+                to='/work'
+            >
                 <Icon
                     color={'white'}
                     children={<MdWork />}
                     size={'1.5em'}
                 />
             </NavLink>
-            <NavLink to='/contact'>
+            <NavLink
+                to='/contact'
+            >
                 <Icon
                     color={'white'}
                     children={<MdOutlineContactMail />}

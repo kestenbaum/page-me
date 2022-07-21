@@ -46,6 +46,10 @@
   left: 0 !important;
 }
 
+.sidebarLeft {
+  left: -100px;
+}
+
 .nav {
   display: flex;
   flex-direction: column;
