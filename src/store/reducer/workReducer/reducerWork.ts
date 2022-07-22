@@ -1,5 +1,4 @@
-import {IAction} from "../../../types";
-import {IStateWork} from "../../../types";
+import {IAction, IWork} from "../../../types";
 import airbag from '../../../assets/images/airbag.png'
 import it from '../../../assets/images/it.png'
 import work from '../../../assets/images/work.png'
@@ -7,9 +6,6 @@ import technology from './../../../assets/images/technology.png'
 import aosta from './../../../assets/images/aosta.png'
 import repair from './../../../assets/images/repair.png'
 
-interface IWork {
-    works: IStateWork[]
-}
 
 const initialState:IWork = {
     works: [

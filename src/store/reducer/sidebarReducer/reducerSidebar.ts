@@ -1,11 +1,9 @@
 import {IAction} from "../../../types";
 
-interface ISidebar {
-    sidebarClass: string[]
-}
-const initialState:ISidebar = {
+const initialState = {
     sidebarClass: ['sidebar']
 }
+
 export const reducerSidebar = (state = initialState , action:IAction) => {
     switch (action.type){
         case "ADD_CLASS":

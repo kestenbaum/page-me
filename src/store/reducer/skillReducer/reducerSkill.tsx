@@ -5,7 +5,6 @@ import {FaReact} from "react-icons/fa";
 import {SiRedux} from "react-icons/si";
 import {IAction, ISkill} from "../../../types";
 
-
 export enum Direction {
     GET_SKILL ='GET_SKILL'
 }

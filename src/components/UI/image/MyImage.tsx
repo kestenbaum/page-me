@@ -1,10 +1,7 @@
 import React, {FC} from 'react';
+import {IImageInterface} from "../../../types";
 
-interface imageProps extends React.ImgHTMLAttributes<any>{
-    props?: any
-}
-
-const MyImage:FC<imageProps> = ({...props}) => {
+const MyImage:FC<IImageInterface> = ({...props}) => {
     return (
         <img {...props}/>
     );

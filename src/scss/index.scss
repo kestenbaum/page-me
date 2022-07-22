@@ -12,14 +12,17 @@
   padding: 0 15px;
   margin: 0 auto;
 }
+
 .link{
   text-decoration: none;
 }
+
 /*---- layout----*/
 .layout{
   position: relative;
   background: $base-color;
 }
+
 .layout-wrapper{
   display: flex;
 }
@@ -39,12 +42,15 @@
   background: $header-color;
   height: 100vh;
 }
+
 .sidebarActive{
   left: 0 !important;
 }
+
 .sidebarLeft{
   left: -100px;
 }
+
 .nav{
   display: flex;
   flex-direction: column;
@@ -59,6 +65,7 @@
   padding: 50px;
   margin-left: 100px;
 }
+
 /*---- Home ----*/
 .home-page{
   display: flex;
@@ -67,15 +74,18 @@
   gap: 20px;
   height: 100%;
 }
+
 .home-title{
   font-size: 36px;
   color: white;
   text-transform: uppercase;
 }
+
 .home-description{
   font-size: 24px;
   color: white;
 }
+
 /*---- About ----*/
 .person-block{
   display: flex;
@@ -86,36 +96,43 @@
   border-radius: 15px;
   padding: 25px;
 }
+
 .person-info{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   gap: 20px;
 }
+
 .person-avatar{
   border-radius: 50%;
 }
+
 .person-document{
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
+
 .person-title{
   font-size: 20px;
   font-weight: bold;
   color: aliceblue;
 }
+
 .avatar{
   max-width: 100%;
   max-height: 250px;
   border-radius: 50%;
 }
+
 .skills-block{
   display: flex;
   flex-direction: column;
   gap: 20px;
   width: 60%;
 }
+
 .skill-item{
   display: flex;
   align-items: center;
@@ -130,17 +147,20 @@
   flex-direction: column;
   gap: 20px;
 }
+
 .title-work{
   font-size: 20px;
   font-weight: bold;
   color: aliceblue;
 }
+
 .block-work{
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 20px;
 }
+
 .card-work{
   display: flex;
   flex-direction: column;
@@ -152,6 +172,7 @@
   padding: 25px;
   min-width: 250px;
 }
+
 .image-work{
   width: 100%;
   height: 100%;
@@ -165,6 +186,7 @@
   flex-direction: column;
   gap: 20px;
 }
+
 .contact-block{
   display: flex;
   align-items: center;
@@ -174,6 +196,7 @@
   border-radius: 15px;
   padding: 25px;
 }
+
 .contact-link{
   font-size: 20px;
   color: #fff;
@@ -183,19 +206,24 @@
 /*---- media ----*/
 
 @media all and (max-width: 680px){
+
   .sidebar{
     left: -100px;
     transition-duration: .5s;
   }
+
   .page-wrapper{
     margin: 50px 0 0;
   }
+
   .contact-block{
     overflow-wrap: anywhere;
   }
+
   .page-wrapper{
     padding: 20px;
   }
+
   .burgerWrapper{
     display: flex;
   }

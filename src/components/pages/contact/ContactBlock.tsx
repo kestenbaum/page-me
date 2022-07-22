@@ -1,13 +1,9 @@
 import React, {FC} from 'react';
 import {motion} from "framer-motion";
 import Icon from "../../UI/icon/Icon";
+import {IContactBlock} from "../../../types";
 
-interface IContactBlock {
-    props: any
-}
-
-const ContactBlock:FC<IContactBlock> = (props) => {
-
+const ContactBlock:FC<IContactBlock> = ({props}) => {
     return (
         <motion.div
             className='contact-block'
@@ -16,9 +12,9 @@ const ContactBlock:FC<IContactBlock> = (props) => {
             <Icon
                 color={'white'}
                 size={'1.5em'}
-                children={props.props.component}
+                children={props.component}
             />
-            <a href={props.props.href} className='contact-link'>{props.props.contact}</a>
+            <a href={props.href} className='contact-link'>{props.contact}</a>
         </motion.div>
     );
 };

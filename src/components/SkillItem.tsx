@@ -1,13 +1,8 @@
 import React, {FC} from 'react';
 import Icon from "./UI/icon/Icon";
-
-interface ISkillItem {
-    skill: string
-    component: any
-}
+import {ISkillItem} from "../types";
 
 const SkillItem:FC<ISkillItem> = (props) => {
-
     return (
         <div className='skill-item'>
             <Icon

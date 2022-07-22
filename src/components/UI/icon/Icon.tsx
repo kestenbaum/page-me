@@ -1,15 +1,8 @@
 import React, {FC} from 'react';
 import {IconContext} from "react-icons";
+import {IIcon} from "../../../types";
 
-interface IIcon {
-    color: string
-    children: any
-    size: string
-}
-
-const Icon:FC<IIcon> = (props) => {
-    const {color, children, size} = props
-
+const Icon:FC<IIcon> = ({color, children, size}) => {
     return (
         <IconContext.Provider value={{ color: color, size: size, className: "global-class-name" }}>
             <div>

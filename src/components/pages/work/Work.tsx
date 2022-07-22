@@ -2,9 +2,8 @@ import React, {FC} from 'react';
 import {useTypeSelector} from "../../../hooks/useTypedSelector";
 import CardWork from "./CardWork";
 
-
 const Work:FC = () => {
-
+    {/*---- Get works----*/}
     const data = useTypeSelector(item => item.workPage.works)
 
     return (

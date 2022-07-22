@@ -7,21 +7,24 @@ import {useDispatch} from "react-redux";
 import {actionAddClassSidebar, actionRemoveClassSidebar} from "./store/reducer/sidebarReducer/actionSidebar";
 
 const Layout = () => {
-    const [state, setState] = useState<boolean>(false)
+    {/*---- State Burger Menu ----*/}
+    const [active, setActive] = useState<boolean>(false)
+
     const classes = useTypeSelector(item => item.sidebar.sidebarClass)
+
     const dispatch = useDispatch()
 
     useEffect(() => {
-        if (state) {
+        if (active) {
             dispatch(actionAddClassSidebar('sidebarActive'))
         } else {
             dispatch(actionRemoveClassSidebar('sidebarActive'))
         }
-    }, [state])
+    }, [active])
 
     return (
         <div className='layout'>
-            <BurgerMenu state={state} setState={setState}/>
+            <BurgerMenu state={active} setState={setActive}/>
             <div className='container'>
                 <div className='layout-wrapper'>
                     <Sidebar classes={classes}/>
