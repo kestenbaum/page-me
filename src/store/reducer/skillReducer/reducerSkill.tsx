@@ -11,8 +11,8 @@ export enum Direction {
 
 const initialState:ISkill = {
     data:[
-        {id: 1, components: <DiCss3/>, skill: 'HTML5'},
-        {id: 2, components: <AiFillHtml5/>, skill: 'CSS/SCSS'},
+        {id: 1, components: <AiFillHtml5/>, skill: 'HTML5'},
+        {id: 2, components: <DiCss3/>, skill: 'CSS/SCSS'},
         {id: 3, components: <SiJavascript/>, skill: 'JavaScript'},
         {id: 4, components: <FaReact/>, skill: 'React'},
         {id: 5, components: <SiRedux/>, skill: 'Redux'},
