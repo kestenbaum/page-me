@@ -5,7 +5,9 @@ import work from '../../../assets/images/work.png'
 import technology from './../../../assets/images/technology.png'
 import aosta from './../../../assets/images/aosta.png'
 import repair from './../../../assets/images/repair.png'
-
+import portfolio from './../../../assets/images/portfolio.png'
+import shop from './../../../assets/images/shop.png'
+import quiz from './../../../assets/images/quiz.png'
 
 const initialState:IWork = {
     works: [
@@ -44,6 +46,26 @@ const initialState:IWork = {
             title: 'Repair',
             img: repair,
             link: 'https://kestenbaum.github.io/Portfolio/project/'
+        }
+    ],
+    worksReact: [
+        {
+            id: 7,
+            title: 'Portfolio',
+            img: portfolio,
+            link: 'https://page-me.vercel.app/'
+        },
+        {
+            id: 8,
+            title: 'Ouiz',
+            img: quiz,
+            link: 'https://quiz-sigma-blond.vercel.app/'
+        },
+        {
+            id: 9,
+            title: 'Shop',
+            img: shop,
+            link: 'https://krovshop.vercel.app/'
         }
     ]
 }

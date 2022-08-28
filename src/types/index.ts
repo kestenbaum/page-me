@@ -65,5 +65,6 @@ export interface IAction {
 {/*---- reducerWork ----*/}
 export interface IWork {
     works: IStateWork[]
+    worksReact: IStateWork[]
 }
 
