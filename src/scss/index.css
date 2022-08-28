@@ -5,6 +5,10 @@
   box-sizing: border-box;
 }
 
+::-webkit-scrollbar-track {
+  background-color: #161b22;
+}
+
 .container {
   width: 100%;
   max-width: 1280px;
@@ -155,7 +159,7 @@
 
 .block-work {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 20px;
 }
@@ -208,19 +212,15 @@
     left: -100px;
     transition-duration: 0.5s;
   }
-
   .page-wrapper {
     margin: 50px 0 0;
   }
-
   .contact-block {
     overflow-wrap: anywhere;
   }
-
   .page-wrapper {
     padding: 20px;
   }
-
   .burgerWrapper {
     display: flex;
   }
