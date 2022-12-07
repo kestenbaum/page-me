@@ -1,31 +1,32 @@
 import React, {FC} from 'react';
-import {useTypeSelector} from "../../hooks/useTypedSelector";
-import CardWork from "./CardWork";
 
-const Work:FC = () => {
-    {/*---- Get works----*/}
-    const dataWork = useTypeSelector(item => item.workPage.works)
-    const dataReact = useTypeSelector(item => item.workPage.worksReact)
+import {useTypeSelector} from "../../hooks/useTypedSelector";
+import {CardWork} from "../../components/CardWork/CardWork";
+import cl from './Work.module.css';
+
+export const Work:FC = () => {
+    const getDataWork = useTypeSelector(item => item.workPage.works)
+    const getDataReact = useTypeSelector(item => item.workPage.worksReact)
 
     return (
         <div className='work-page'>
-            <h2 className='title-work'>Portfolio</h2>
-            <h3 className='title-work'>HTML/CSS/JS</h3>
+            <h2 className={cl.title}>Portfolio</h2>
+            <h3 className={cl.titleH2}>HTML/CSS/JS</h3>
             <div className='block-work'>
                 {
-                    dataWork.length === 0
+                    getDataWork.length === 0
                         ? <h2 className='title-work'>Работы пока отсутствуют!</h2>
-                        : dataWork.map(item =>
+                        : getDataWork.map(item =>
                             <CardWork key={item.id} props={item}/>
                         )
                 }
             </div>
-            <h3 className='title-work'>React/Redux</h3>
+            <h3 className={cl.titleH2}>React/Redux</h3>
             <div className='block-work'>
                 {
-                    dataReact.length === 0
+                    getDataReact.length === 0
                         ? <h2 className='title-work'>Работы пока отсутствуют!</h2>
-                        : dataReact.map(item =>
+                        : getDataReact.map(item =>
                             <CardWork key={item.id} props={item}/>
                         )
                 }
@@ -33,5 +34,3 @@ const Work:FC = () => {
         </div>
     );
 };
-
-export default Work;
