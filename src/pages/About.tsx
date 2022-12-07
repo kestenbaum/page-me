@@ -1,7 +1,7 @@
 import React, {FC} from 'react';
-import avatar from './../../assets/images/me.png'
-import {useTypeSelector} from "../../hooks/useTypedSelector";
-import SkillItem from "../SkillItem";
+import avatar from '../assets/images/me.png'
+import {useTypeSelector} from "../hooks/useTypedSelector";
+import SkillItem from "../components/SkillItem";
 
 const About:FC = () => {
     const data = useTypeSelector(item => item.skills.data)

@@ -1,7 +1,7 @@
 import React, {FC} from 'react';
-import MyButton from "../../UI/button/MyButton";
-import MyImage from "../../UI/image/MyImage";
-import {ICardWork} from "../../../types";
+import MyButton from "../../components/UI/button/MyButton";
+import MyImage from "../../components/UI/image/MyImage";
+import {ICardWork} from "../../types";
 
 const CardWork:FC<ICardWork> = ({props}) => {
     return (

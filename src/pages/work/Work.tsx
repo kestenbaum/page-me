@@ -1,5 +1,5 @@
 import React, {FC} from 'react';
-import {useTypeSelector} from "../../../hooks/useTypedSelector";
+import {useTypeSelector} from "../../hooks/useTypedSelector";
 import CardWork from "./CardWork";
 
 const Work:FC = () => {

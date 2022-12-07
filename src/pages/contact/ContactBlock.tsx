@@ -1,7 +1,7 @@
 import React, {FC} from 'react';
 import {motion} from "framer-motion";
-import Icon from "../../UI/icon/Icon";
-import {IContactBlock} from "../../../types";
+import Icon from "../../components/UI/icon/Icon";
+import {IContactBlock} from "../../types";
 
 const ContactBlock:FC<IContactBlock> = ({props}) => {
     return (
