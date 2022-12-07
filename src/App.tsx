@@ -1,12 +1,14 @@
 import React from 'react';
-import './scss/index.css'
-import Layout from "./Layout";
+import './index.css';
+import {PageWrapper} from "./pages/PageWrapper/PageWrapper";
 
 
 const App = () => {
     return (
         <div className='app'>
-            <Layout/>
+            <div className="container">
+                <PageWrapper/>
+            </div>
         </div>
     );
 };

@@ -1,25 +1,8 @@
-import React, {useEffect, useState} from 'react';
-import {PageWrapper} from "./components/PageWrapper";
-import {useTypeSelector} from "./hooks/useTypedSelector";
-import {useDispatch} from "react-redux";
-import {actionAddClassSidebar, actionRemoveClassSidebar} from "./store/reducer/sidebarReducer/actionSidebar";
+import React, {FC} from 'react';
+import {PageWrapper} from "./pages/PageWrapper/PageWrapper";
 
-const Layout = () => {
-    {/*---- State Burger Menu ----*/}
-    const [active, setActive] = useState<boolean>(false)
 
-    const classes = useTypeSelector(item => item.sidebar.sidebarClass)
-
-    const dispatch = useDispatch()
-
-    useEffect(() => {
-        if (active) {
-            dispatch(actionAddClassSidebar('sidebarActive'))
-        } else {
-            dispatch(actionRemoveClassSidebar('sidebarActive'))
-        }
-    }, [active])
-
+export const Layout:FC = () => {
     return (
         <div className='layout'>
             <div className='container'>
@@ -30,5 +13,3 @@ const Layout = () => {
         </div>
     );
 };
-
-export default Layout;

@@ -1,5 +1,5 @@
 import {Skills} from "./About/Skills";
-import {Work} from "./work/Work";
+import {Work} from "./Work/Work";
 import {Contact} from "./Contact/Contact";
 import {FirstScreen} from "./FirstScreen/FirstScreen";
 

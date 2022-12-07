@@ -9,10 +9,10 @@ export const Work:FC = () => {
     const getDataReact = useTypeSelector(item => item.workPage.worksReact)
 
     return (
-        <div className='work-page'>
+        <div className={cl.wrapper}>
             <h2 className={cl.title}>Portfolio</h2>
             <h3 className={cl.titleH2}>HTML/CSS/JS</h3>
-            <div className='block-work'>
+            <div className={cl.block}>
                 {
                     getDataWork.length === 0
                         ? <h2 className='title-work'>Работы пока отсутствуют!</h2>
@@ -22,7 +22,7 @@ export const Work:FC = () => {
                 }
             </div>
             <h3 className={cl.titleH2}>React/Redux</h3>
-            <div className='block-work'>
+            <div className={cl.block}>
                 {
                     getDataReact.length === 0
                         ? <h2 className='title-work'>Работы пока отсутствуют!</h2>

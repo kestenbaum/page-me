@@ -6,7 +6,7 @@ import cl from './ContactBlock.module.css';
 export const ContactBlock:FC<IContactBlock> = ({props}) => {
     return (
         <motion.div
-            className='contact-block'
+            className={cl.wrapper}
             whileHover={{scale: 1.03}}
         >
             <a href={props.href} className={cl.title}>{props.contact}</a>

@@ -1,3 +1,12 @@
+.wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #161b22;
+    border: 2px solid rgba(80, 80, 80, 0.5);
+    border-radius: 15px;
+    padding: 25px;
+}
 .title {
     font-size: 16px;
     color: #fff;
