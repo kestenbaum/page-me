@@ -1,5 +1,5 @@
 import React, {FC} from 'react';
-import MyButton from "../UI/button/MyButton";
+import {MyButton} from "../UI/button/MyButton";
 import MyImage from "../UI/image/MyImage";
 import {ICardWork} from "../../types";
 import cl from './CardWork.module.css';

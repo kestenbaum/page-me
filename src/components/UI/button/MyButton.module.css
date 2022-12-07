@@ -3,12 +3,20 @@
     align-items: center;
     justify-content: center;
     padding: 5px 15px;
-    background-color: #21a4f7;
+    background-color: #0d1117;
     color: #fff;
     cursor: pointer;
     border-radius: 15px;
     text-decoration: none;
+    font-size: 16px;
+    font-family: 'Zen Dots', cursive;
+    font-weight: normal;
+    letter-spacing: .2rem;
+    transition: .3s;
 }
 .btn:hover{
-    background: #42b2f8;
+    background: #161b28;
+    border-color: transparent;
+    transform: scale(1.1);
+    transition: .3s;
 }
