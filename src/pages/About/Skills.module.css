@@ -1,0 +1,21 @@
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.title {
+    font-size: 36px;
+    color: #fff;
+    font-family: 'Zen Dots', cursive;
+    font-weight: normal;
+    letter-spacing: .2rem;
+}
+
+.cardBlock {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
