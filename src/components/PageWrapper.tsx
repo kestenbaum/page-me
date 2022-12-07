@@ -1,21 +1,12 @@
 import React, {FC} from 'react';
-import {Route, Routes} from "react-router-dom";
-import {Home} from "../pages/Home";
-import About from "../pages/About";
-import Contact from "../pages/contact/Contact";
-import Work from "../pages/work/Work";
+import {Work, About, Contact} from '../pages'
 
-const PageWrapper:FC = () => {
+export const PageWrapper:FC = () => {
     return (
         <div className='page-wrapper'>
-            <Routes>
-                <Route path='/' element={<Home/>}/>
-                <Route path='/about' element={<About/>}/>
-                <Route path='/contact' element={<Contact/>}/>
-                <Route path='/work' element={<Work/>}/>
-            </Routes>
+            <About/>
+            <Work/>
+            <Contact/>
         </div>
     );
 };
-
-export default PageWrapper;
