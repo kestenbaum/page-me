@@ -1,0 +1,33 @@
+.wrapper {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    min-height: 100vh;
+}
+
+.title {
+    font-size: 48px;
+    color: #fff;
+    font-family: 'Zen Dots', cursive;
+    font-weight: normal;
+    letter-spacing: .2rem;
+}
+
+.description {
+    font-size: 24px;
+    color: #fff;
+    font-family: 'Zen Dots', cursive;
+    font-weight: normal;
+    padding: 0 15px;
+    letter-spacing: .2rem;
+}
+
+.titleH2 {
+    font-size: 36px;
+    color: #fff;
+    font-family: 'Zen Dots', cursive;
+    font-weight: normal;
+    letter-spacing: .2rem;
+}
