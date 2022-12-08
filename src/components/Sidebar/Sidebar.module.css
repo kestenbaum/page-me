@@ -1,0 +1,25 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.link {
+    font-size: 14px;
+    color: #fff;
+    font-family: 'Zen Dots', cursive;
+    font-weight: normal;
+    letter-spacing: .2rem;
+    transition: .3s;
+}
+
+.link:hover{
+    transform: scale(1.2);
+    transition: .3s;
+}
