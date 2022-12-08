@@ -1,9 +1,9 @@
-import React from 'react';
+import React, {FC} from 'react';
 import './index.css';
 import {PageWrapper} from "./pages/PageWrapper/PageWrapper";
 
 
-const App = () => {
+export const App:FC = () => {
     return (
         <div className='app'>
             <div className="container">
@@ -12,5 +12,3 @@ const App = () => {
         </div>
     );
 };
-
-export default App;

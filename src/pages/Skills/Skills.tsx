@@ -1,7 +1,7 @@
 import React, {FC} from 'react';
-import cl from './Skills.module.css';
-import {dataIcons} from "../../data/icons";
+import {dataIcons} from "../../data";
 import {SkillCard} from "../../components/SkillCard/SkillCard";
+import cl from './Skills.module.css';
 
 export const Skills:FC = () => {
     return (

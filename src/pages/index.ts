@@ -1,4 +1,4 @@
-import {Skills} from "./About/Skills";
+import {Skills} from "./Skills/Skills";
 import {Work} from "./Work/Work";
 import {Contact} from "./Contact/Contact";
 import {FirstScreen} from "./FirstScreen/FirstScreen";

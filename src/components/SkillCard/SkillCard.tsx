@@ -1,12 +1,8 @@
 import React, {FC} from 'react';
+import {SkillCardProps} from "../../types";
 import cl from './SkillCard.module.css';
 
-interface SkillCard {
-    title: string,
-    icon: string | any
-}
-
-export const SkillCard:FC<SkillCard> = ({icon, title}) => {
+export const SkillCard:FC<SkillCardProps> = ({icon, title}) => {
     return (
         <div className={cl.cardWrapper}>
             <img className={cl.cardIcon} src={icon} alt="" />

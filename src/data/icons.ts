@@ -5,9 +5,12 @@ import react from "../assets/images/icons/react.png";
 import redux from "../assets/images/icons/redux.png";
 import ts from "../assets/images/icons/ts.png";
 import mui from "../assets/images/icons/mui.png";
-import React from "react";
 
-export const dataIcons = [
+import React from "react";
+import {Icons} from "../types";
+
+
+export const dataIcons: Icons[] = [
     {
         id: 1,
         title: 'HTML',

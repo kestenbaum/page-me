@@ -15,7 +15,7 @@ export const Work:FC = () => {
             <div className={cl.block}>
                 {
                     getDataWork.length === 0
-                        ? <h2 className='title-work'>Работы пока отсутствуют!</h2>
+                        ? <h2 className={cl.title}>Работы пока отсутствуют!</h2>
                         : getDataWork.map(item =>
                             <CardWork key={item.id} props={item}/>
                         )
@@ -25,7 +25,7 @@ export const Work:FC = () => {
             <div className={cl.block}>
                 {
                     getDataReact.length === 0
-                        ? <h2 className='title-work'>Работы пока отсутствуют!</h2>
+                        ? <h2 className={cl.title}>Работы пока отсутствуют!</h2>
                         : getDataReact.map(item =>
                             <CardWork key={item.id} props={item}/>
                         )

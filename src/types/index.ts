@@ -26,3 +26,14 @@ export interface ISkillItem {
     skill: string
     component: any
 }
+
+export interface Icons {
+    id: number,
+    title: string,
+    img: string
+}
+
+export interface SkillCardProps {
+    title: string,
+    icon: string | any
+}
