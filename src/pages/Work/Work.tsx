@@ -1,12 +1,12 @@
 import React, {FC} from 'react';
 
-import {useTypeSelector} from "../../hooks/useTypedSelector";
+import {workData} from "../../data";
 import {CardWork} from "../../components/CardWork/CardWork";
 import cl from './Work.module.css';
 
 export const Work:FC = () => {
-    const getDataWork = useTypeSelector(item => item.workPage.works)
-    const getDataReact = useTypeSelector(item => item.workPage.worksReact)
+    const getDataWork = workData.works;
+    const getDataReact = workData.worksReact;
 
     return (
         <div className={cl.wrapper}>

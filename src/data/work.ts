@@ -1,15 +1,14 @@
-import {IAction, IWork} from "../../../types";
-import airbag from '../../../assets/images/airbag.png'
-import it from '../../../assets/images/it.png'
-import work from '../../../assets/images/work.png'
-import technology from './../../../assets/images/technology.png'
-import aosta from './../../../assets/images/aosta.png'
-import repair from './../../../assets/images/repair.png'
-import portfolio from './../../../assets/images/portfolio.png'
-import shop from './../../../assets/images/shop.png'
-import quiz from './../../../assets/images/quiz.png'
+import airbag from "../assets/images/airbag.png";
+import it from "../assets/images/it.png";
+import work from "../assets/images/work.png";
+import technology from "../assets/images/technology.png";
+import aosta from "../assets/images/aosta.png";
+import repair from "../assets/images/repair.png";
+import portfolio from "../assets/images/portfolio.png";
+import quiz from "../assets/images/quiz.png";
+import shop from "../assets/images/shop.png";
 
-const initialState:IWork = {
+export const workData = {
     works: [
         {
             id: 1,
@@ -68,13 +67,4 @@ const initialState:IWork = {
             link: 'https://krovshop.vercel.app/'
         }
     ]
-}
-
-export const reducerWork = (state = initialState, action:IAction) => {
-    switch (action.type){
-        case "DATA_WORKS":
-            return {...state}
-        default:
-            return {...state}
-    }
 }
