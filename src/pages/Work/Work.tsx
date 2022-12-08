@@ -9,7 +9,7 @@ export const Work:FC = () => {
     const getDataReact = workData.worksReact;
 
     return (
-        <div className={cl.wrapper}>
+        <div className={cl.wrapper} id='work'>
             <h2 className={cl.title}>Portfolio</h2>
             <h3 className={cl.titleH2}>HTML/CSS/JS</h3>
             <div className={cl.block}>

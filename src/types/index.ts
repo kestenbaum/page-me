@@ -16,10 +16,9 @@ export interface IStateWork {
 }
 
 export interface IButton extends
-    React.DetailedHTMLProps<React.HTMLProps<HTMLButtonElement>, HTMLButtonElement>{}
-
-export interface IImageInterface extends React.ImgHTMLAttributes<any>{
-    props?: any
+    React.DetailedHTMLProps<React.BaseHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>
+{
+    disabled?: boolean
 }
 
 export interface ISkillItem {
