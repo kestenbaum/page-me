@@ -5,7 +5,7 @@ import cl from './Skills.module.css';
 
 export const Skills:FC = () => {
     return (
-        <div className={cl.wrapper}>
+        <div className={cl.wrapper} id='skill'>
             <h2 className={cl.title}>My skills</h2>
             <section className={cl.cardBlock}>
                 {dataIcons.map(icon =>

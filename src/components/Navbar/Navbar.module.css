@@ -31,6 +31,7 @@
 
 .listItem {
     list-style: none;
+    transition: .3s;
 }
 
 .listLink {
@@ -39,4 +40,11 @@
     font-family: 'Zen Dots', cursive;
     font-weight: normal;
     letter-spacing: .2rem;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.listItem:hover {
+    transition: .3s;
+    transform: scale(1.1);
 }

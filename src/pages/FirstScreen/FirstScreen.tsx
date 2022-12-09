@@ -3,7 +3,7 @@ import cl from './FirstScreen.module.css';
 
 export const FirstScreen:FC = () => {
     return (
-        <div className={cl.wrapper}>
+        <div className={cl.wrapper} id='home'>
             <h1 className={cl.title}>Hi everyone</h1>
             <p className={cl.description}>My name's Oleksii. I'm from Ukraine and have been a web developer for the last 2 years. I  believe in strong
                 dedication in each project of my clients and client's satisfaction is the first concern in my career.
