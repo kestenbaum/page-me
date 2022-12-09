@@ -7,12 +7,6 @@ export const Navbar: FC = () => {
     const navigateClass = [cl.list]
     if (isOpen) navigateClass.push(cl.active)
 
-    const toggleBurgerMenu = () => {
-        setIsOpen(!isOpen)
-        console.log(navigateClass)
-        console.log(isOpen)
-    }
-
     return (
         <>
             <ul
@@ -56,7 +50,7 @@ export const Navbar: FC = () => {
             </ul>
             <button
                 className={cl.burger}
-                onClick={toggleBurgerMenu}
+                onClick={() => setIsOpen(!isOpen)}
             >
                 Burger Menu
             </button>
