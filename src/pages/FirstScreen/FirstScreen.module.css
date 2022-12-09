@@ -32,7 +32,17 @@
     letter-spacing: .2rem;
 }
 
-@media all and (max-width: 790px){
+@media screen and (max-width: 1024px){
+    .title{
+        font-size: 28px;
+    }
+    .description, .titleH2{
+        font-size: 18px;
+        letter-spacing: 0;
+    }
+}
+
+@media screen and (max-width: 790px){
     .title{
         font-size: 24px;
     }
