@@ -23,3 +23,37 @@
     transition: .3s;
     transform: scale(1.1);
 }
+
+.burger {
+    display: none;
+}
+
+
+@media screen and (max-width: 500px) {
+    .list {
+        display: flex;
+        position: fixed;
+        top: 60px;
+        right: -100%;
+        flex-direction: column;
+        height: 100vh;
+        width: 100%;
+        background-color: #0d1117;
+        z-index: 999;
+        overflow: hidden;
+        transition: .3s;
+    }
+
+    .listItem {
+        text-align: center;
+    }
+
+    .burger {
+        display: flex;
+    }
+
+    .active {
+        right: 0;
+        transition: .3s;
+    }
+}
