@@ -28,8 +28,7 @@
     display: none;
 }
 
-
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 650px) {
     .list {
         display: flex;
         position: fixed;
