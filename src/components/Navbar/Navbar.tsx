@@ -14,7 +14,7 @@ export const Navbar:FC = () => {
                             to='home'
                             spy={true}
                             smooth={true}
-                            offset={50}
+                            offset={-70}
                             duration={500}
                             className={cl.listItem}
                         ><span className={cl.listLink}>Home</span></Link>
@@ -22,7 +22,7 @@ export const Navbar:FC = () => {
                             to='skill'
                             spy={true}
                             smooth={true}
-                            offset={50}
+                            offset={-70}
                             duration={500}
                             className={cl.listItem}
                         ><span className={cl.listLink}>Skills</span></Link>
@@ -30,14 +30,14 @@ export const Navbar:FC = () => {
                             to='work'
                             spy={true}
                             smooth={true}
-                            offset={50}
+                            offset={-70}
                             duration={500}
                             className={cl.listItem}
                         ><span className={cl.listLink}>Works</span></Link>
                         <Link
                             to='contact'
                             smooth={true}
-                            offset={50}
+                            offset={-70}
                             duration={500}
                             className={cl.listItem}
                         ><span className={cl.listLink}>Contact</span></Link>
