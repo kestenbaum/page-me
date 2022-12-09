@@ -9,7 +9,13 @@ export const ContactBlock:FC<IContactBlock> = ({props}) => {
             className={cl.wrapper}
             whileHover={{scale: 1.03}}
         >
-            <a href={props.href} className={cl.title}>{props.contact}</a>
+            <a
+                href={props.href}
+                className={cl.title}
+                target="_blank"
+            >
+                {props.contact}
+            </a>
         </motion.div>
     );
 };
