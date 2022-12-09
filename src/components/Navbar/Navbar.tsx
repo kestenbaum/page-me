@@ -52,7 +52,6 @@ export const Navbar: FC = () => {
                 className={cl.burger}
                 onClick={() => setIsOpen(!isOpen)}
             >
-                Burger Menu
             </button>
         </>
     );

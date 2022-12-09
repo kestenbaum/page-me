@@ -50,6 +50,29 @@
 
     .burger {
         display: flex;
+        align-items: center;
+        justify-content: center;
+        outline: none;
+        border: none;
+        height: 2px;
+        width: 30px;
+        background: #ffffff;
+    }
+
+    .burger::after{
+        content: '';
+        height: 2px;
+        width: 30px;
+        background: #ffffff;
+        transform: translateY(-5px);
+    }
+
+    .burger::before{
+        content: '';
+        height: 2px;
+        width: 30px;
+        background: #ffffff;
+        transform: translateY(5px);
     }
 
     .active {
