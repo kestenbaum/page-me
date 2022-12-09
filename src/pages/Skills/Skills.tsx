@@ -8,14 +8,14 @@ export const Skills:FC = () => {
         <div className={cl.wrapper}>
             <h2 className={cl.title} id='skill'>My skills</h2>
             <section className={cl.cardBlock}>
-                {dataIcons.map(icon =>
-                    <SkillCard
-                        key={icon.id}
-                        icon={icon.img}
-                        title={icon.title}
-                    />
-                )}
-            </section>
+                    {dataIcons.map(icon =>
+                        <SkillCard
+                            key={icon.id}
+                            icon={icon.img}
+                            title={icon.title}
+                        />
+                    )}
+                </section>
         </div>
     );
 };

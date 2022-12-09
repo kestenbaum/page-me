@@ -31,3 +31,12 @@
     font-weight: normal;
     letter-spacing: .2rem;
 }
+
+@media all and (max-width: 790px){
+    .title{
+        font-size: 24px;
+    }
+    .description, .titleH2{
+        font-size: 16px;
+    }
+}

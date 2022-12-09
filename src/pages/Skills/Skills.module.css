@@ -18,3 +18,14 @@
     gap: 40px;
 }
 
+@media screen and (max-width: 805px){
+    .cardBlock {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 420px){
+    .cardBlock {
+        gap: 20px;
+    }
+}
