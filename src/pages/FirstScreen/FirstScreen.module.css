@@ -10,7 +10,7 @@
 .title {
     font-size: 36px;
     color: #fff;
-    font-family: 'Zen Dots', cursive;
+    font-family: 'Oswald', sans-serif;
     font-weight: normal;
     letter-spacing: .2rem;
 }
@@ -18,7 +18,7 @@
 .description {
     font-size: 24px;
     color: #fff;
-    font-family: 'Zen Dots', cursive;
+    font-family: 'Oswald', sans-serif;
     font-weight: normal;
     letter-spacing: .2rem;
     padding: 0;
@@ -27,7 +27,7 @@
 .titleH2 {
     font-size: 24px;
     color: #fff;
-    font-family: 'Zen Dots', cursive;
+    font-family: 'Oswald', sans-serif;
     font-weight: normal;
     letter-spacing: .2rem;
 }
