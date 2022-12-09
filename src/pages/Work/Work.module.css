@@ -6,9 +6,9 @@
 
 .block{
     display: flex;
-    justify-content: center;
+    flex: 0 0 33.33%;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 40px;
 }
 
 .title {
@@ -27,3 +27,8 @@
     letter-spacing: .2rem;
 }
 
+@media screen and (max-width: 1024px) {
+    .block {
+        justify-content: center;
+    }
+}
