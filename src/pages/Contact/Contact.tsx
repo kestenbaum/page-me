@@ -5,7 +5,7 @@ import cl from './Contact.module.css';
 
 export const Contact: FC = () => {
     return (
-        <div className={cl.wrapper} id='contact'>
+        <section className={cl.wrapper} id='contact'>
             <h2 className={cl.title}>Contact</h2>
             {contactIcons.map(item =>
                 <ContactBlock
@@ -13,6 +13,6 @@ export const Contact: FC = () => {
                     props={item}
                 />
             )}
-        </div>
+        </section>
     );
 };
