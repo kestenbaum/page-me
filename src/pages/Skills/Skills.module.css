@@ -1,4 +1,4 @@
-.wrapper{
+.wrapper {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -14,17 +14,23 @@
 
 .cardBlock {
     display: flex;
+    justify-content: flex-start;
     flex-wrap: wrap;
-    gap: 40px;
+    gap: 18px;
 }
 
-@media screen and (max-width: 1024px){
+.cardBlock .col {
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (max-width: 1024px) {
     .cardBlock {
         justify-content: center;
     }
 }
 
-@media screen and (max-width: 420px){
+@media screen and (max-width: 420px) {
     .cardBlock {
         gap: 20px;
     }
