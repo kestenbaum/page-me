@@ -4,9 +4,9 @@ import work from "../assets/images/work.png";
 import technology from "../assets/images/technology.png";
 import aosta from "../assets/images/aosta.png";
 import repair from "../assets/images/repair.png";
-import portfolio from "../assets/images/portfolio.png";
-import quiz from "../assets/images/quiz.png";
-import shop from "../assets/images/shop.png";
+import cart from '../assets/images/cart.png';
+import drive from '../assets/images/drive.png';
+import cyber from '../assets/images/cyber.png';
 
 export const workData = {
     works: [
@@ -50,21 +50,21 @@ export const workData = {
     worksReact: [
         {
             id: 7,
-            title: 'Portfolio',
-            img: portfolio,
-            link: 'https://page-me.vercel.app/'
+            title: 'Shopping Cart',
+            img: cart,
+            link: 'https://react-ts-shoping-card.vercel.app/'
         },
         {
             id: 8,
-            title: 'Ouiz',
-            img: quiz,
-            link: 'https://quiz-sigma-blond.vercel.app/'
+            title: 'Drive Application',
+            img: drive,
+            link: 'https://drive-lovat.vercel.app/'
         },
         {
             id: 9,
-            title: 'Shop',
-            img: shop,
-            link: 'https://krovshop.vercel.app/'
+            title: 'Cyber App',
+            img: cyber,
+            link: 'https://cyber-five.vercel.app/'
         }
     ]
 }
