@@ -1,5 +1,5 @@
-import React, {FC} from 'react';
-import {Work, Skills, Contact, FirstScreen} from '../index'
+import { FC } from 'react';
+import { Contact, FirstScreen, Skills, Work } from '../index';
 import cl from './PageWrapper.module.css';
 
 export const PageWrapper:FC = () => {
