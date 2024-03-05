@@ -1,5 +1,5 @@
 import React, {FC} from 'react';
-import logo from '../../assets/images/icons/logo.png';
+import logo from '../../assets/icons/logo.png';
 import cl from './Logo.module.css';
 import {Link} from "react-scroll";
 

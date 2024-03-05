@@ -1,10 +1,10 @@
-import html from "../assets/images/icons/html.png";
-import css from "../assets/images/icons/css.png";
-import js from "../assets/images/icons/js.png";
-import react from "../assets/images/icons/react.png";
-import redux from "../assets/images/icons/redux.png";
-import ts from "../assets/images/icons/ts.png";
-import mui from "../assets/images/icons/mui.png";
+import html from "../assets/icons/html.png";
+import css from "../assets/icons/css.png";
+import js from "../assets/icons/js.png";
+import react from "../assets/icons/react.png";
+import redux from "../assets/icons/redux.png";
+import ts from "../assets/icons/ts.png";
+import mui from "../assets/icons/mui.png";
 
 import React from "react";
 import {Icons} from "../types";
