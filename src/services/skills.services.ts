@@ -1,12 +1,12 @@
 import axios from "axios";
-import {Icons} from "../types";
+import {Icons, IGetData} from "../types";
 
 class SkillsServices {
-    private URL = 'http://localhost:5000/skills';
+    private URL = "https://kestenbaum-page-me-api.onrender.com/api";
 
     getSkills = async () => {
-        const {data} = await axios.get<Icons[]>(this.URL)
-        return data
+        const response = await axios.get<IGetData>(this.URL + '/skills');
+        return response?.data.data
     }
 }
 

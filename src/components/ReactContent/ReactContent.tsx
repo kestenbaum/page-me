@@ -1,13 +1,14 @@
 import React from 'react';
 import {useQuery} from "react-query";
-import {CardWork} from "../../../components/CardWork/CardWork";
-import {worksServices} from "../../../services/works.services";
+import {CardWork} from "../CardWork/CardWork";
+import {worksServices} from "../../services/works.services";
 
 import cl from "../Work.module.css";
+
 const ReactContent = () => {
     const {data, isLoading} = useQuery({
         queryKey: ['react'],
-        queryFn: () => worksServices.getWorksReact()
+        queryFn: () => worksServices.getWorks()
     })
 
     return (
@@ -17,7 +18,9 @@ const ReactContent = () => {
                 {isLoading ?
                     <div className={cl.title}>Loading...</div>
                     :
-                    data?.map(item => <CardWork key={item.id} props={item}/>) }
+                    data
+                        ?.filter(item => item.category === 'react')
+                        ?.map(item => <CardWork key={item._id} props={item}/>)}
             </div>
         </div>
     );

@@ -1,4 +1,4 @@
-import React, {FC} from 'react';
+import React, {FC, useEffect} from 'react';
 import HtmlContent from "./HtmlContent/HtmlContent";
 import ReactContent from "./ReactContent/ReactContent";
 

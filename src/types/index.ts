@@ -21,11 +21,17 @@ export interface ISkillItem {
     component: any
 }
 export interface Icons {
-    id: number,
+    _id: string,
     title: string,
-    img: string
+    img: string,
+    category?: string
 }
 export interface SkillCardProps {
     title: string,
     icon: string | any
+}
+
+export interface IGetData {
+    status: number
+    data: Icons[]
 }

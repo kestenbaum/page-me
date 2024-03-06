@@ -10,11 +10,11 @@ export const ContactBlock:FC<IContactBlock> = ({props}) => {
             whileHover={{scale: 1.03}}
         >
             <a
-                href={props.href}
+                href={props.value}
                 className={cl.title}
                 target="_blank"
             >
-                {props.contact}
+                {props.title}
             </a>
         </motion.div>
     );

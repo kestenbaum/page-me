@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { Header } from "./components/Header/Header";
 import './index.css';
-import { PageWrapper } from "./pages/PageWrapper/PageWrapper";
+import { PageWrapper } from "./components/PageWrapper/PageWrapper";
 
 export const App:FC = () => {
     return (

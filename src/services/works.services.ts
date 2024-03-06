@@ -1,20 +1,13 @@
 import axios from "axios";
-import {IStateWork} from "../types";
+import {IGetData} from "../types";
 
 class WorksServices {
-    private URL_WORKS_HTML = 'http://localhost:5000/web'
-    private URL_WORKS_REACT = 'http://localhost:5000/react'
+    private URL = "https://kestenbaum-page-me-api.onrender.com/api/works"
 
-    getWorksHTML = async () => {
-       const {data} = await axios.get<IStateWork[]>(this.URL_WORKS_HTML)
-       return data
+    getWorks = async () => {
+        const response = await axios.get<IGetData>(this.URL)
+        return response.data?.data
     }
-
-    getWorksReact = async () => {
-       const {data} = await axios.get<IStateWork[]>(this.URL_WORKS_REACT)
-       return data
-    }
-
 }
 
 

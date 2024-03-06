@@ -3,7 +3,7 @@ import {MyButton} from "../UI/button/MyButton";
 import {ICardWork} from "../../types";
 import cl from './CardWork.module.css';
 
-export const CardWork:FC<ICardWork> = ({props}) => {
+export const CardWork:FC<any> = ({props}) => {
     const {title, img, link} = props
     return (
         <div className={cl.card}>

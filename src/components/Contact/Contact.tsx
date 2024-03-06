@@ -2,7 +2,7 @@ import React, {FC} from 'react';
 import {useQuery} from "react-query";
 import {contactServices} from "../../services/contact.services";
 
-import {ContactBlock} from "../../components/ContactBlock/ContactBlock";
+import {ContactBlock} from "../ContactBlock/ContactBlock";
 
 import cl from './Contact.module.css';
 
@@ -20,7 +20,7 @@ export const Contact: FC = () => {
                 :
                 data?.map(item =>
                     <ContactBlock
-                        key={item.id}
+                        key={item._id}
                         props={item}
                     />
                 )
