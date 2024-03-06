@@ -1,7 +1,48 @@
 {
   "contact": [
-    {"id": 1, "contact": "Telegram: Oleksii Vovnenko", "href": "https://t.me/oleksii_vvn"},
-    {"id": 2, "contact": "Gmail: kespa71for@gmail.com", "href": "mailto:kespa71for@gmail.com"},
-    {"id": 3, "contact": "Github Page: Kestenbaum", "href": "https://github.com/kestenbaum"}
+    {
+      "id": 1, "contact": "Telegram: Oleksii Vovnenko", "href": "https://t.me/oleksii_vvn"},
+    {
+      "id": 2, "contact": "Gmail: kespa71for@gmail.com", "href": "mailto:kespa71for@gmail.com"},
+    {
+      "id": 3, "contact": "Github Page: Kestenbaum", "href": "https://github.com/kestenbaum"
+    }
+  ],
+  "skills": [
+    {
+      "id": 1,
+      "title": "HTML",
+      "img": "/icons/html.png"
+    },
+    {
+      "id": 2,
+      "title": "CSS",
+      "img": "/icons/css.png"
+    },
+    {
+      "id": 3,
+      "title": "Javascript",
+      "img": "/icons/js.png"
+    },
+    {
+      "id": 4,
+      "title": "React",
+      "img": "/icons/react.png"
+    },
+    {
+      "id": 5,
+      "title": "Redux",
+      "img": "/icons/redux.png"
+    },
+    {
+      "id": 6,
+      "title": "TypeScript",
+      "img": "/icons/ts.png"
+    },
+    {
+      "id": 7,
+      "title": "MUI 5",
+      "img": "/icons/mui.png"
+    }
   ]
 }

@@ -1,17 +1,26 @@
 import React, {FC} from 'react';
-import {dataIcons} from "../../data";
 import {SkillCard} from "../../components/SkillCard/SkillCard";
 import cl from './Skills.module.css';
+import {useQuery} from "react-query";
+import {skillsServices} from "../../services/skills.services";
 
 export const Skills: FC = () => {
+
+    const {data} = useQuery({
+        queryKey: ['skills'],
+        queryFn: () => skillsServices.getSkills()
+    })
+
     return (
         <div className={cl.wrapper}>
             <h2 className={cl.title} id='skill'>My skills</h2>
             <section className={cl.cardBlock}>
-                {dataIcons.map(icon =>
-                    <div className={cl.col}>
+                {data?.map(icon =>
+                    <div
+                        className={cl.col}
+                        key={icon.id}
+                    >
                         <SkillCard
-                            key={icon.id}
                             icon={icon.img}
                             title={icon.title}
                         />
