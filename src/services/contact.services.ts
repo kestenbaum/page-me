@@ -1,12 +1,12 @@
 import axios from "axios";
-import {Icons, IContactBlock} from "../types";
+import {Icons, IGetData} from "../types";
 
 class ContactServices {
-    private URL = "http://localhost:5000/contact";
+    private URL = "https://kestenbaum-page-me-api.onrender.com/api";
 
     getContact = async () => {
-        const {data} = await axios.get<Icons[]>(this.URL)
-        return data
+        const response = await axios.get<IGetData>(this.URL + '/contacts')
+        return response.data?.data
     }
 }
 
