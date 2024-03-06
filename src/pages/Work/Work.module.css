@@ -19,12 +19,13 @@
     letter-spacing: .2rem;
 }
 
-.titleH2{
+.title__section{
     font-size: 16px;
     color: #fff;
     font-family: 'Oswald', sans-serif;
     font-weight: normal;
     letter-spacing: .2rem;
+    margin-bottom: 10px;
 }
 
 @media screen and (max-width: 1024px) {
