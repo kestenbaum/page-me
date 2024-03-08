@@ -1,6 +1,6 @@
 import React, {FC} from 'react';
 import {motion} from "framer-motion";
-import {IContactBlock} from "../../types";
+import {IContactBlock} from "../../../types";
 import cl from './ContactBlock.module.css';
 
 export const ContactBlock:FC<IContactBlock> = ({props}) => {

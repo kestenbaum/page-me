@@ -1,5 +1,5 @@
 import React, {FC} from 'react';
-import {SkillCardProps} from "../../types";
+import {SkillCardProps} from "../../../types";
 import cl from './SkillCard.module.css';
 
 export const SkillCard:FC<SkillCardProps> = ({icon, title}) => {

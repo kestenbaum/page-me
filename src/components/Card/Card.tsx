@@ -1,9 +1,8 @@
 import {FC} from 'react';
 import {MyButton} from "../UI/button/MyButton";
-import {ICardWork} from "../../types";
-import cl from './CardWork.module.css';
+import cl from './Card.module.css';
 
-export const CardWork:FC<any> = ({props}) => {
+export const Card:FC<any> = ({props}) => {
     const {title, img, link} = props
     return (
         <div className={cl.card}>

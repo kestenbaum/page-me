@@ -1,8 +1,9 @@
 import React, {FC} from 'react';
-import {SkillCard} from "../SkillCard/SkillCard";
+import {SkillCard} from "./SkillCard/SkillCard";
 import {skillsServices} from "../../services/skills.services";
 import {useQuery} from "react-query";
 import cl from './Skills.module.css';
+import Loader from "../Loader/Loader";
 
 
 export const Skills: FC = () => {
@@ -17,7 +18,7 @@ export const Skills: FC = () => {
             <section className={cl.cardBlock}>
                 {
                     isLoading ?
-                        <div>Loading...</div>
+                        <Loader/>
                         :
                         data?.map((icon, idx) =>
                             <div

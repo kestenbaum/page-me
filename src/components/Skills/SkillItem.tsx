@@ -1,5 +1,5 @@
 import React, {FC} from 'react';
-import {ISkillItem} from "../types";
+import {ISkillItem} from "../../types";
 
 const SkillItem:FC<ISkillItem> = (props) => {
     return (
