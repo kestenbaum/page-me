@@ -1,25 +1,25 @@
 .cardWrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 5px;
-    height: 150px;
-    width: 150px;
-    background: #161b22;
-    border-radius: 15px;
-    border: 2px solid rgba(80, 80, 80, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 5px;
+  height: 150px;
+  width: 150px;
+  background: #161b22;
+  border-radius: 15px;
+  border: 2px solid rgba(80, 80, 80, 0.5);
 }
 
 .cardIcon {
-    height: 100px;
-    width: 100px;
+  height: 100px;
+  width: 100px;
 }
 
 .title {
-    font-size: 13px;
-    color: #fff;
-    font-family: 'Oswald', sans-serif;
-    font-weight: normal;
-    letter-spacing: .2rem;
+  font-size: 13px;
+  color: #fff;
+  font-family: 'Oswald', sans-serif;
+  font-weight: normal;
+  letter-spacing: 0.2rem;
 }

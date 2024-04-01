@@ -1,38 +1,38 @@
 .wrapper {
-    display: flex;
-    gap: 15px;
-    align-items: center;
-    justify-content: flex-start;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .logo {
-    display: flex;
+  display: flex;
 }
 
 .logo:after {
-    content: " ";
-    display: block;
-    width: 20px;
-    height: 20px;
-    margin: 8px;
-    border-radius: 50%;
-    border: 6px solid #fff;
-    border-color: #fff transparent #fff transparent;
-    animation: logo 1.2s linear infinite;
+  content: ' ';
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid #fff;
+  border-color: #fff transparent #fff transparent;
+  animation: logo 1.2s linear infinite;
 }
 @keyframes logo {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .text {
-    font-size: 16px;
-    color: #fff;
-    font-family: 'Oswald', sans-serif;
-    font-weight: normal;
-    letter-spacing: .2rem;
+  font-size: 16px;
+  color: #fff;
+  font-family: 'Oswald', sans-serif;
+  font-weight: normal;
+  letter-spacing: 0.2rem;
 }

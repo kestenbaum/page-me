@@ -1,53 +1,55 @@
 .wrapper {
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 20px;
-    min-height: 100vh;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  min-height: 100vh;
 }
 
 .title {
-    font-size: 36px;
-    color: #fff;
-    font-family: 'Oswald', sans-serif;
-    font-weight: normal;
-    letter-spacing: .2rem;
+  font-size: 36px;
+  color: #fff;
+  font-family: 'Oswald', sans-serif;
+  font-weight: normal;
+  letter-spacing: 0.2rem;
 }
 
 .description {
-    font-size: 24px;
-    color: #fff;
-    font-family: 'Oswald', sans-serif;
-    font-weight: normal;
-    letter-spacing: .2rem;
-    padding: 0;
+  font-size: 24px;
+  color: #fff;
+  font-family: 'Oswald', sans-serif;
+  font-weight: normal;
+  letter-spacing: 0.2rem;
+  padding: 0;
 }
 
 .titleH2 {
+  font-size: 24px;
+  color: #fff;
+  font-family: 'Oswald', sans-serif;
+  font-weight: normal;
+  letter-spacing: 0.2rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .title {
     font-size: 24px;
-    color: #fff;
-    font-family: 'Oswald', sans-serif;
-    font-weight: normal;
-    letter-spacing: .2rem;
+  }
+  .description,
+  .titleH2 {
+    font-size: 16px;
+    letter-spacing: 0;
+  }
 }
 
-@media screen and (max-width: 1024px){
-    .title{
-        font-size: 24px;
-    }
-    .description, .titleH2{
-        font-size: 16px;
-        letter-spacing: 0;
-    }
-}
-
-@media screen and (max-width: 790px){
-    .title{
-        font-size: 24px;
-    }
-    .description, .titleH2{
-        font-size: 16px;
-        letter-spacing: 0;
-    }
+@media screen and (max-width: 790px) {
+  .title {
+    font-size: 24px;
+  }
+  .description,
+  .titleH2 {
+    font-size: 16px;
+    letter-spacing: 0;
+  }
 }

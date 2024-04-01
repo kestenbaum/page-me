@@ -1,12 +1,12 @@
-import { lazy } from "react";
+import { lazy } from 'react';
 
-export function LazyLoad (path:string, namedExport?:string) {
+export function LazyLoad(path: string, namedExport?: string) {
   return lazy(() => {
-      const promise = import(path)
-      if (namedExport == null){
-        return promise
-      }  else {
-        return promise.then(module => ({default: module[namedExport]}))
-      }
-  })   
+    const promise = import(path);
+    if (namedExport == null) {
+      return promise;
+    } else {
+      return promise.then((module) => ({ default: module[namedExport] }));
+    }
+  });
 }

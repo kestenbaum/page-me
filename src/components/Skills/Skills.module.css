@@ -1,37 +1,37 @@
 .wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .title {
-    font-size: 36px;
-    color: #fff;
-    font-family: 'Oswald', sans-serif;
-    font-weight: normal;
-    letter-spacing: .2rem;
+  font-size: 36px;
+  color: #fff;
+  font-family: 'Oswald', sans-serif;
+  font-weight: normal;
+  letter-spacing: 0.2rem;
 }
 
 .cardBlock {
-    display: flex;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    gap: 18px;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 18px;
 }
 
 .cardBlock .col {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 @media screen and (max-width: 1024px) {
-    .cardBlock {
-        justify-content: center;
-    }
+  .cardBlock {
+    justify-content: center;
+  }
 }
 
 @media screen and (max-width: 420px) {
-    .cardBlock {
-        gap: 20px;
-    }
+  .cardBlock {
+    gap: 20px;
+  }
 }

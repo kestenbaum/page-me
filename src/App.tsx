@@ -1,15 +1,15 @@
 import { FC } from 'react';
-import { Header } from "./components/Header/Header";
+import { Header } from './components/Header/Header';
 import './index.css';
-import { PageWrapper } from "./components/PageWrapper/PageWrapper";
+import { PageWrapper } from './components/PageWrapper/PageWrapper';
 
-export const App:FC = () => {
-    return (
-        <div className='app'>
-            <div className="container">
-                <Header/>
-                <PageWrapper/>
-            </div>
-        </div>
-    );
+export const App: FC = () => {
+  return (
+    <div className='app'>
+      <div className='container'>
+        <Header />
+        <PageWrapper />
+      </div>
+    </div>
+  );
 };
