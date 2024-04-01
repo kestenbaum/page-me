@@ -1,15 +1,16 @@
 import React from 'react';
 import { useQuery } from 'react-query';
+import { getWorks } from '../../api/requests/works';
+
 import { Card } from '../Card/Card';
-import { worksServices } from '../../services/works.services';
+import Loader from '../UI/Loader/Loader';
 
 import cl from '../Work.module.css';
-import Loader from '../Loader/Loader';
 
 const ReactContent = () => {
   const { data, isLoading } = useQuery({
     queryKey: ['react'],
-    queryFn: () => worksServices.getWorks()
+    queryFn: () => getWorks().then((responce) => responce.data)
   });
 
   return (
@@ -19,9 +20,11 @@ const ReactContent = () => {
         {isLoading ? (
           <Loader />
         ) : (
-          data
+          data?.data
             ?.filter((item) => item.category === 'react')
-            ?.map((item) => <Card key={item._id} props={item} />)
+            ?.map((item) => (
+              <Card key={item._id} img={item.img} link={item.link} title={item.title} />
+            ))
         )}
       </div>
     </div>
