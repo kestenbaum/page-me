@@ -1,14 +1,14 @@
 import React, { FC } from 'react';
-import { SkillCard } from './SkillCard/SkillCard';
-import { skillsServices } from '../../services/skills.services';
 import { useQuery } from 'react-query';
+import { getSkills } from '../../api/requests/skills';
+import { SkillCard } from './SkillCard/SkillCard';
+import Loader from '../UI/Loader/Loader';
 import cl from './Skills.module.css';
-import Loader from '../Loader/Loader';
 
 export const Skills: FC = () => {
   const { data, isLoading } = useQuery({
     queryKey: ['skills'],
-    queryFn: () => skillsServices.getSkills()
+    queryFn: () => getSkills().then((responce) => responce.data)
   });
 
   return (
@@ -20,9 +20,9 @@ export const Skills: FC = () => {
         {isLoading ? (
           <Loader />
         ) : (
-          data?.map((icon, idx) => (
+          data?.data.map((icon, idx) => (
             <div className={cl.col} key={idx}>
-              <SkillCard icon={icon.img} title={icon.title} />
+              <SkillCard img={icon.img} title={icon.title} />
             </div>
           ))
         )}
