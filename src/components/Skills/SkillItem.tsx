@@ -1,10 +1,8 @@
 import React, { FC } from 'react';
-import { ISkillItem } from '../../types';
-
-const SkillItem: FC<ISkillItem> = (props) => {
+const SkillItem: FC<Skill> = ({ title }) => {
   return (
     <div className='skill-item'>
-      <span className='person-title'>{props.skill}</span>
+      <span className='person-title'>{title}</span>
     </div>
   );
 };
