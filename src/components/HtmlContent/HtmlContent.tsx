@@ -1,15 +1,16 @@
 import React, { FC } from 'react';
-import { Card } from '../Card/Card';
 import { useQuery } from 'react-query';
-import { worksServices } from '../../services/works.services';
+import { getWorks } from '../../api/requests/works';
+
+import { Card } from '../Card/Card';
+import Loader from '../UI/Loader/Loader';
 
 import cl from '../Work.module.css';
-import Loader from '../Loader/Loader';
 
 const HtmlContent: FC = () => {
   const { data, isLoading } = useQuery({
     queryKey: ['html'],
-    queryFn: () => worksServices.getWorks()
+    queryFn: () => getWorks().then((responce) => responce.data)
   });
 
   return (
@@ -19,9 +20,11 @@ const HtmlContent: FC = () => {
         {isLoading ? (
           <Loader />
         ) : (
-          data
+          data?.data
             ?.filter((item) => item.category === 'web')
-            ?.map((item) => <Card key={item._id} props={item} />)
+            ?.map((item) => (
+              <Card key={item._id} link={item.link} title={item.title} img={item.img} />
+            ))
         )}
       </div>
     </div>
