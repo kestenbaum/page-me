@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
-import logo from '../../assets/logo.png';
-import cl from './Logo.module.css';
 import { Link } from 'react-scroll';
+import logo from '../../../assets/logo.png';
+import cl from './Logo.module.css';
 
 export const Logo: FC = () => {
   return (
