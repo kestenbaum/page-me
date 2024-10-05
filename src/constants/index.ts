@@ -18,7 +18,7 @@ export const HEADER_MENU: HeaderMenuProps[] = [
     }
 ]
 
-export const INTRO_DATE:string[] = [
+export const INTRO_DATE: string[] = [
     " my name's Oleksii. I'm from Ukraine and have been a web developer for the last 2 years. I\n" +
     "                    believe in strong dedication in each project of my clients and client's satisfaction is the\n" +
     "                    first concern in my career.",
