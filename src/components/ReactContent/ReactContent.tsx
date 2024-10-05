@@ -5,7 +5,7 @@ import { getWorks } from '../../api/requests/works';
 import { Card } from '../Card/Card';
 import Loader from '../Loader/Loader';
 
-import cl from '../Work.module.css';
+import cl from '../Work/Work.module.css';
 
 const ReactContent = () => {
   const { data, isLoading } = useQuery({

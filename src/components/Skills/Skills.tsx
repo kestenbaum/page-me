@@ -1,32 +1,35 @@
-import React, { FC } from 'react';
 import { useQuery } from 'react-query';
 import { getSkills } from '../../api/requests/skills';
-import { SkillCard } from './SkillCard/SkillCard';
 import Loader from '../Loader/Loader';
-import cl from './Skills.module.css';
+import style from './Skills.module.css';
 
-export const Skills: FC = () => {
+export const Skills = () => {
   const { data, isLoading } = useQuery({
     queryKey: ['skills'],
     queryFn: () => getSkills().then((responce) => responce.data)
   });
 
   return (
-    <div className={cl.wrapper}>
-      <h2 className={cl.title} id='skill'>
+    <div className={style.wrapper}>
+      <h2 className={style.title} id='skill'>
         My skills
       </h2>
-      <section className={cl.cardBlock}>
+      <section className={style.cardBlock}>
         {isLoading ? (
           <Loader />
         ) : (
           data?.data.map((icon, idx) => (
-            <div className={cl.col} key={idx}>
-              <SkillCard img={icon.img} title={icon.title} />
-            </div>
+              <div className={style.col} key={idx}>
+                  <div className={style.cardWrapper}>
+                      <img className={style.cardIcon} src={process.env.PUBLIC_URL + icon.img} alt='icon'/>
+                      <h2 className={style.title}>{icon.title}</h2>
+                  </div>
+              </div>
           ))
         )}
       </section>
     </div>
   );
 };
+
+export default Skills;

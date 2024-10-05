@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
-import HtmlContent from './HtmlContent/HtmlContent';
-import ReactContent from './ReactContent/ReactContent';
+import HtmlContent from '../HtmlContent/HtmlContent';
+import ReactContent from '../ReactContent/ReactContent';
 
 import cl from './Work.module.css';
 
