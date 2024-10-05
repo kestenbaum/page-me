@@ -1,12 +1,10 @@
-import React, {FC} from 'react';
-
 import {useQuery} from 'react-query';
 import {getContacts} from '../../api/requests/contacts';
 import Loader from '../Loader/Loader';
 import style from './Contact.module.css';
 
 
-export const Contact: FC = () => {
+export const Contact = () => {
     const {data, isLoading} = useQuery({
         queryKey: ['contacts'],
         queryFn: () => getContacts().then((responce) => responce?.data)
