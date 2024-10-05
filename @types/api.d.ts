@@ -31,3 +31,9 @@ type GetSkills = {
   data: Skill[];
   status: number;
 };
+
+interface HeaderMenuProps {
+  id: number,
+  to: string,
+  link: string
+}

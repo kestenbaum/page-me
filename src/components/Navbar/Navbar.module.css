@@ -4,12 +4,12 @@
   gap: 20px;
 }
 
-.listItem {
+.item {
   list-style: none;
   transition: 0.3s;
 }
 
-.listLink {
+.link {
   font-size: 16px;
   color: #fff;
   font-family: 'Oswald', sans-serif;
@@ -43,7 +43,7 @@
     transition: 0.3s;
   }
 
-  .listItem {
+  .item {
     text-align: center;
   }
 
@@ -75,7 +75,18 @@
   }
 
   .active {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 60px;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    background-color: #0d1117;
+    z-index: 999;
+    overflow: hidden;
     right: 0;
     transition: 0.3s;
+    gap: 20px;
   }
 }

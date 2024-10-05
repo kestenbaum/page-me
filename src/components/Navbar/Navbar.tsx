@@ -1,60 +1,30 @@
-import React, { FC, useState } from 'react';
-import { Link } from 'react-scroll';
-import cl from './Navbar.module.css';
+import { useState } from 'react';
+import {Link} from 'react-scroll';
+import {HEADER_MENU} from "../../constants";
+import style from './Navbar.module.css';
 
-export const Navbar: FC = () => {
-  const [isOpen, setIsOpen] = useState<boolean>(false);
-  const navigateClass = [cl.list];
-  if (isOpen) navigateClass.push(cl.active);
-
-  return (
-    <>
-      <ul className={navigateClass.join(' ')}>
-        <Link
-          to='home'
-          spy={true}
-          smooth={true}
-          offset={-70}
-          duration={500}
-          className={cl.listItem}
-          onClick={() => setIsOpen(false)}
-        >
-          <span className={cl.listLink}>Home</span>
-        </Link>
-        <Link
-          to='skill'
-          spy={true}
-          smooth={true}
-          offset={-70}
-          duration={500}
-          className={cl.listItem}
-          onClick={() => setIsOpen(false)}
-        >
-          <span className={cl.listLink}>Skills</span>
-        </Link>
-        <Link
-          to='work'
-          spy={true}
-          smooth={true}
-          offset={-70}
-          duration={500}
-          className={cl.listItem}
-          onClick={() => setIsOpen(false)}
-        >
-          <span className={cl.listLink}>Works</span>
-        </Link>
-        <Link
-          to='contact'
-          smooth={true}
-          offset={-70}
-          duration={500}
-          className={cl.listItem}
-          onClick={() => setIsOpen(false)}
-        >
-          <span className={cl.listLink}>Contact</span>
-        </Link>
-      </ul>
-      <button className={cl.burger} onClick={() => setIsOpen(!isOpen)}></button>
-    </>
-  );
+const Navbar = () => {
+    const [isOpen, setIsOpen] = useState(false);
+    return (
+        <>
+            <menu className={!isOpen ? style.list : style.active}>
+              {HEADER_MENU.length > 0 &&
+                  HEADER_MENU.map(element => <Link
+                  key={element.id}
+                  to={element.to}
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={500}
+                  className={style.item}
+                  onClick={() => setIsOpen(false)}
+              >
+                <span className={style.link}>{element.link}</span>
+              </Link>)}
+            </menu>
+            <button className={style.burger} onClick={() => setIsOpen(!isOpen)}></button>
+        </>
+    );
 };
+
+export default Navbar;
