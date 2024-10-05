@@ -37,3 +37,7 @@ interface HeaderMenuProps {
   to: string,
   link: string
 }
+
+interface LogoProps {
+  children: string
+}

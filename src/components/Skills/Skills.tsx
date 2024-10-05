@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import { useQuery } from 'react-query';
 import { getSkills } from '../../api/requests/skills';
 import { SkillCard } from './SkillCard/SkillCard';
-import Loader from '../UI/Loader/Loader';
+import Loader from '../Loader/Loader';
 import cl from './Skills.module.css';
 
 export const Skills: FC = () => {

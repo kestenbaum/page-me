@@ -4,7 +4,7 @@ import { useQuery } from 'react-query';
 import { getContacts } from '../../api/requests/contacts';
 import { ContactBlock } from './ContactBlock/ContactBlock';
 
-import Loader from '../UI/Loader/Loader';
+import Loader from '../Loader/Loader';
 import cl from './Contact.module.css';
 
 export const Contact: FC = () => {

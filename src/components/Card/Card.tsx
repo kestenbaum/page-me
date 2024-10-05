@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { MyButton } from '../UI/Button/MyButton';
+import { MyButton } from '../Button/MyButton';
 
 import cl from './Card.module.css';
 
