@@ -3,7 +3,6 @@
   align-content: center;
   justify-content: center;
   flex-direction: column;
-  gap: 20px;
   min-height: 100vh;
 }
 
@@ -16,6 +15,12 @@
 }
 
 .description {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.description p {
   font-size: 24px;
   color: #fff;
   font-family: 'Oswald', sans-serif;
@@ -24,7 +29,7 @@
   padding: 0;
 }
 
-.titleH2 {
+h2 {
   font-size: 24px;
   color: #fff;
   font-family: 'Oswald', sans-serif;
@@ -47,8 +52,8 @@
   .title {
     font-size: 24px;
   }
-  .description,
-  .titleH2 {
+  .description p,
+  h2 {
     font-size: 16px;
     letter-spacing: 0;
   }

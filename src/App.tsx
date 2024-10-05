@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { Header } from './components/Header/Header';
+import  Header  from './components/Header/Header';
 import { PageWrapper } from './components/PageWrapper/PageWrapper';
 import './index.css';
 
