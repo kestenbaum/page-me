@@ -1,15 +1,20 @@
-import { FC } from 'react';
-import  Header  from './components/Header/Header';
-import { PageWrapper } from './components/PageWrapper/PageWrapper';
+import Header from './components/Header/Header';
+import Intro from "./components/Intro/Intro";
+import {Skills} from "./components/Skills/Skills";
+import {Work} from "./components/Work";
+import {Contact} from "./components/Contact/Contact";
 import './index.css';
 
-export const App: FC = () => {
-  return (
-    <div className='app'>
-      <div className='container'>
-        <Header />
-        <PageWrapper />
-      </div>
-    </div>
-  );
+const App = () => {
+    return (
+            <div className='container'>
+                <Header/>
+                <Intro/>
+                <Skills/>
+                <Work/>
+                <Contact/>
+            </div>
+    );
 };
+
+export default App;

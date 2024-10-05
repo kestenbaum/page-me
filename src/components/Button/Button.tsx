@@ -1,12 +1,12 @@
 import React, { FC } from 'react';
-import style from './MyButton.module.css';
+import style from './Button.module.css';
 
 interface IButton
   extends React.DetailedHTMLProps<React.BaseHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> {
   disabled?: boolean;
 }
 
-export const MyButton: FC<IButton> = (props) => {
+export const Button: FC<IButton> = (props) => {
   const { children, ...rest } = props;
 
   return (

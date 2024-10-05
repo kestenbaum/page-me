@@ -1,8 +1,0 @@
-.pageWrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 50px;
-  min-height: 100vh;
-  background: #0d1117;
-  width: 100%;
-}

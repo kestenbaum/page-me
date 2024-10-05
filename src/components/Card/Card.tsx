@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { MyButton } from '../Button/MyButton';
+import { Button } from '../Button/Button';
 
 import cl from './Card.module.css';
 
@@ -9,7 +9,7 @@ export const Card: FC<Card> = ({ link, img, title }) => {
       <h2 className={cl.title}>{title}</h2>
       <img src={img} className={cl.img} alt={''} />
       <a href={link} target='_blank' rel='noreferrer'>
-        <MyButton>Link to project</MyButton>
+        <Button>Link to project</Button>
       </a>
     </div>
   );
