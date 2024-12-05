@@ -17,11 +17,6 @@ interface Card {
   link: string;
 }
 
-type GetCards = {
-  data: Card[];
-  status: number;
-};
-
 interface Skill {
   title: string;
   img: string;
