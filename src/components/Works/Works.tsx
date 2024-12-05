@@ -1,49 +1,28 @@
 import React, { FC } from 'react';
-import Loader from "../UI/Loader/Loader";
-import Card from "../Card/Card";
-import useFetchResource from "../../hooks/useFetchResource";
+import useFetchResource from "@/hooks/useFetchResource";
+import RenderSection from "@/components/Works/renderSection/RenderSection";
+import Loader from "@/components/UI/Loader/Loader";
 
 import style from './Works.module.css';
 
 
 const Works: FC = () => {
-    const { data: htmlResponse, isLoading: isLoadingHtml } = useFetchResource("/works", "web");
-    const { data: reactResponse, isLoading: isLoadingReact } = useFetchResource("/works", "react");
+    const { data, isLoading } = useFetchResource<Card[]>("/works", "works");
 
-    const renderSection = (
-        title: string,
-        data: Card[],
-        isLoading: boolean,
-        filterCategory: string
-    ) => (
-        <div>
-            <h3 className={style.title__section}>{title}</h3>
-            <div className={style.block}>
-                {isLoading ? (
-                    <Loader />
-                ) : (
-                    data
-                        ?.filter((item) => item.category === filterCategory)
-                        ?.map((item) => (
-                            <Card
-                                key={item._id}
-                                img={item.img}
-                                link={item.link}
-                                title={item.title}
-                            />
-                        ))
-                )}
-            </div>
+    if (isLoading) {
+        return <Loader />;
+    }
+
+    const htmlData = data?.filter(item => item.category === 'web') || [];
+    const reactData = data?.filter(item => item.category === 'react') || [];
+
+    return (
+        <div className={style.wrapper} id="work">
+            <h2 className={style.title}>Portfolio</h2>
+            <RenderSection title="HTML/CSS/JS" data={htmlData} isLoading={isLoading} filterCategory="web" />
+            <RenderSection title="React/Next" data={reactData} isLoading={isLoading} filterCategory="react" />
         </div>
     );
-
-  return (
-      <div className={style.wrapper} id="work">
-          <h2 className={style.title}>Portfolio</h2>
-          {renderSection("HTML/CSS/JS", htmlResponse, isLoadingHtml, "web")}
-          {renderSection("React/Next", reactResponse, isLoadingReact, "react")}
-      </div>
-  );
 };
 
 export default Works;
