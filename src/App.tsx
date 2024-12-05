@@ -1,19 +1,21 @@
 import Header from './components/Header/Header';
 import Intro from "./components/Intro/Intro";
 import {Skills} from "./components/Skills/Skills";
-import {Work} from "./components/Work/Work";
+import {Works} from "./components/Works/Works";
 import {Contact} from "./components/Contact/Contact";
+import Container from "./components/Container/Container";
+
 import './index.css';
 
 const App = () => {
     return (
-            <div className='container'>
+            <Container>
                 <Header/>
                 <Intro/>
                 <Skills/>
-                <Work/>
+                <Works/>
                 <Contact/>
-            </div>
+            </Container>
     );
 };
 

@@ -1,15 +1,22 @@
-import { useState } from 'react';
+import {FC, useState} from 'react';
 import {Link} from 'react-scroll';
 import {HEADER_MENU} from "../../constants";
+
 import style from './Navbar.module.css';
 
-const Navbar = () => {
+const Navbar: FC = () => {
     const [isOpen, setIsOpen] = useState(false);
+
+    function handleClickOpen () {
+        setIsOpen(prev => !prev)
+    }
+
     return (
         <>
             <menu className={!isOpen ? style.list : style.active}>
-              {HEADER_MENU.length > 0 &&
-                  HEADER_MENU.map(element => <Link
+              {!Array.isArray(HEADER_MENU)
+                  ? []
+                  : HEADER_MENU.map(element => <Link
                   key={element.id}
                   to={element.to}
                   spy={true}
@@ -22,7 +29,7 @@ const Navbar = () => {
                 <span className={style.link}>{element.link}</span>
               </Link>)}
             </menu>
-            <button className={style.burger} onClick={() => setIsOpen(!isOpen)}></button>
+            <button className={style.burger} onClick={handleClickOpen}></button>
         </>
     );
 };

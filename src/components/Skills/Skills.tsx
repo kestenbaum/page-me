@@ -1,6 +1,6 @@
 import { useQuery } from 'react-query';
 import { getSkills } from '../../api/requests/skills';
-import Loader from '../Loader/Loader';
+import Loader from '../UI/Loader/Loader';
 import style from './Skills.module.css';
 
 export const Skills = () => {
