@@ -1,14 +1,14 @@
-import {FC} from 'react';
+import { FC } from 'react';
 import Logo from '../UI/Logo/Logo';
-import Navbar from '../Navbar/Navbar';
+import Navbar from './Navbar/Navbar';
 
-import cl from './Header.module.css';
+import style from './Header.module.css';
 
 const Header: FC = () => {
     return (
-        <header className={cl.header}>
-            <div className={cl.container}>
-                <div className={cl.wrapper}>
+        <header className={style.header}>
+            <div className={style.container}>
+                <div className={style.wrapper}>
                     <Logo children="Kestenbaum"/>
                     <Navbar/>
                 </div>

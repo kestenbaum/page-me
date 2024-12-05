@@ -1,12 +1,12 @@
-import React, {FC} from "react";
-import useFetchContact from "../../hooks/useFetchContact";
+import React, { FC } from "react";
 import Loader from '../UI/Loader/Loader';
+import useFetchResource from "../../hooks/useFetchResource";
 
 import style from './Contact.module.css';
 
 
-export const Contact: FC = () => {
-    const { data, isLoading, isError, error } = useFetchContact();
+const Contact: FC = () => {
+    const { data, isLoading, isError, error } = useFetchResource("/contacts", "contact");
 
     return (
         <section className={style.wrapper} id='contact'>
@@ -35,3 +35,5 @@ export const Contact: FC = () => {
         </section>
     );
 };
+
+export default Contact;

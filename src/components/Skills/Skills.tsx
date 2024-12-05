@@ -1,34 +1,32 @@
-import { useQuery } from 'react-query';
-import { getSkills } from '../../api/requests/skills';
+import { FC } from "react";
 import Loader from '../UI/Loader/Loader';
+import useFetchResource from "../../hooks/useFetchResource";
+
 import style from './Skills.module.css';
 
-export const Skills = () => {
-  const { data, isLoading } = useQuery({
-    queryKey: ['skills'],
-    queryFn: () => getSkills().then((responce) => responce.data)
-  });
+const Skills: FC = () => {
+  const { data, isLoading } = useFetchResource<Skill[]>("/skills");
 
   return (
-    <div className={style.wrapper}>
+    <section className={style.wrapper}>
       <h2 className={style.title} id='skill'>
         My skills
       </h2>
       <section className={style.cardBlock}>
-        {isLoading ? (
-          <Loader />
+        {!isLoading ? (
+            data?.map((icon: Skill, idx: number) => (
+                <div className={style.col} key={idx}>
+                    <div className={style.cardWrapper}>
+                        <img className={style.cardIcon} src={process.env.PUBLIC_URL + icon.img} alt='icon'/>
+                        <h2 className={style.title}>{icon.title}</h2>
+                    </div>
+                </div>
+            ))
         ) : (
-          data?.data.map((icon, idx) => (
-              <div className={style.col} key={idx}>
-                  <div className={style.cardWrapper}>
-                      <img className={style.cardIcon} src={process.env.PUBLIC_URL + icon.img} alt='icon'/>
-                      <h2 className={style.title}>{icon.title}</h2>
-                  </div>
-              </div>
-          ))
+            <Loader/>
         )}
       </section>
-    </div>
+    </section>
   );
 };
 
