@@ -1,13 +1,14 @@
 import React, { FC } from 'react';
-import useFetchWorks from "../../hooks/useFetchWorks";
 import Loader from "../UI/Loader/Loader";
 import Card from "../Card/Card";
+import useFetchResource from "../../hooks/useFetchResource";
 
 import style from './Works.module.css';
 
 
 const Works: FC = () => {
-    const { htmlResponse, isLoadingHtml, reactResponse, isLoadingReact } = useFetchWorks();
+    const { data: htmlResponse, isLoading: isLoadingHtml } = useFetchResource("/works", "web");
+    const { data: reactResponse, isLoading: isLoadingReact } = useFetchResource("/works", "react");
 
     const renderSection = (
         title: string,
