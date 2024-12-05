@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import Logo from '../UI/Logo/Logo';
-import Navbar from '../Navbar/Navbar';
+import Navbar from './Navbar/Navbar';
 
 import style from './Header.module.css';
 

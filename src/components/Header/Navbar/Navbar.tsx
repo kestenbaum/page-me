@@ -1,8 +1,34 @@
-import {FC, useState} from 'react';
-import {Link} from 'react-scroll';
-import {HEADER_MENU} from "../../constants";
+import { FC, useState } from 'react';
+import { Link } from 'react-scroll';
 
 import style from './Navbar.module.css';
+
+type HeaderMenuProps = {
+    id: number,
+    to: string,
+    link: string
+}
+
+const HEADER_MENU: HeaderMenuProps[] = [
+    {
+        id: 1,
+        to: "home",
+        link: "Home"
+    }, {
+        id: 2,
+        to: "skill",
+        link: "Skills"
+    }, {
+        id: 3,
+        to: "work",
+        link: "Works"
+    }, {
+        id: 4,
+        to: "contact",
+        link: "Contact"
+    }
+]
+
 
 const Navbar: FC = () => {
     const [isOpen, setIsOpen] = useState(false);
