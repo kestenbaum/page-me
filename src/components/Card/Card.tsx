@@ -1,16 +1,18 @@
 import { FC } from 'react';
 import { Button } from '../UI/Button/Button';
 
-import cl from './Card.module.css';
+import style from './Card.module.css';
 
-export const Card: FC<Card> = ({ link, img, title }) => {
+const Card: FC<Card> = ({ link, img, title }) => {
   return (
-    <div className={cl.card}>
-      <h2 className={cl.title}>{title}</h2>
-      <img src={img} className={cl.img} alt={''} />
+    <div className={style.card}>
+      <h2 className={style.title}>{title}</h2>
+      <img src={img} className={style.img} alt={'Image for card'} />
       <a href={link} target='_blank' rel='noreferrer'>
         <Button>Link to project</Button>
       </a>
     </div>
   );
 };
+
+export default Card;
