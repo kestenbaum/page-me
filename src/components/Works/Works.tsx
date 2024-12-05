@@ -6,7 +6,7 @@ import Card from "../Card/Card";
 import style from './Works.module.css';
 
 
-export const Works: FC = () => {
+const Works: FC = () => {
     const { htmlResponse, isLoadingHtml, reactResponse, isLoadingReact } = useFetchWorks();
 
     const renderSection = (
@@ -44,3 +44,5 @@ export const Works: FC = () => {
       </div>
   );
 };
+
+export default Works;
