@@ -4,11 +4,6 @@ interface Contact {
   value: string;
 }
 
-type GetContacts = {
-  data: Contact[];
-  status: number;
-};
-
 interface Card {
   _id?: string;
   title: string;
@@ -22,17 +17,4 @@ interface Skill {
   img: string;
 }
 
-type GetSkills = {
-  data: Skill[];
-  status: number;
-};
 
-interface HeaderMenuProps {
-  id: number,
-  to: string,
-  link: string
-}
-
-interface LogoProps {
-  children: string
-}
