@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import { useQuery } from 'react-query';
 import { getWorks } from '../../api/requests/works';
 
-import { Card } from '../Card/Card';
+import Card from '../Card/Card';
 import Loader from '../UI/Loader/Loader';
 
 import cl from '../Work/Work.module.css';
