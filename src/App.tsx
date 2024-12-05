@@ -1,22 +1,16 @@
-import Header from '@/components/Header/Header';
-import Intro from "@/components/Intro/Intro";
-import Skills from "@/components/Skills/Skills";
-import Works from "@/components/Works/Works";
-import Contact from "@/components/Contact/Contact";
-import Container from "@/components/Container/Container";
-
+import { Header, Intro, Skills, Works, Contact, Container } from '@/components';
 import './index.css';
 
 const App = () => {
-    return (
-            <Container>
-                <Header/>
-                <Intro/>
-                <Skills/>
-                <Works/>
-                <Contact/>
-            </Container>
-    );
+    const sections = [
+        <Header key="header" />,
+        <Intro key="intro" />,
+        <Skills key="skills" />,
+        <Works key="works" />,
+        <Contact key="contact" />
+    ];
+
+    return <Container>{sections}</Container>;
 };
 
 export default App;
