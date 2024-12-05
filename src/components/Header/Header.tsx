@@ -1,5 +1,5 @@
 import {FC} from 'react';
-import Logo from '../Logo/Logo';
+import Logo from '../UI/Logo/Logo';
 import Navbar from '../Navbar/Navbar';
 
 import cl from './Header.module.css';

@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { Link } from 'react-scroll';
-import logo from '../../assets/logo.png';
+import logo from '../../../assets/logo.png';
 import cl from './Logo.module.css';
 
 const Logo: FC<LogoProps> = ({children}) => {

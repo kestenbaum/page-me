@@ -1,6 +1,6 @@
 import {useQuery} from 'react-query';
 import {getContacts} from '../../api/requests/contacts';
-import Loader from '../Loader/Loader';
+import Loader from '../UI/Loader/Loader';
 import style from './Contact.module.css';
 
 
