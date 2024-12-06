@@ -13,15 +13,30 @@ const Works: FC = () => {
         return <Loader />;
     }
 
-    const htmlData = data?.filter(item => item.category === 'web') || [];
-    const reactData = data?.filter(item => item.category === 'react') || [];
+    const htmlData = Array.isArray(data)
+        ? data.filter(item => item.category === 'web')
+        : [];
+
+    const reactData = Array.isArray(data) ?
+        data.filter(item => item.category === 'react')
+        : [];
 
     return (
-        <div className={style.wrapper} id="work">
+        <section className={style.wrapper} id="work">
             <h2 className={style.title}>Portfolio</h2>
-            <RenderSection title="HTML/CSS/JS" data={htmlData} isLoading={isLoading} filterCategory="web" />
-            <RenderSection title="React/Next" data={reactData} isLoading={isLoading} filterCategory="react" />
-        </div>
+            <RenderSection
+                title="HTML/CSS/JS"
+                data={htmlData}
+                isLoading={isLoading}
+                filterCategory="web"
+            />
+            <RenderSection
+                title="React/Next"
+                data={reactData}
+                isLoading={isLoading}
+                filterCategory="react"
+            />
+        </section>
     );
 };
 
