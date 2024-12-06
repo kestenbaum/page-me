@@ -8,24 +8,21 @@ import style from './Skills.module.css';
 const Skills: FC = () => {
   const { data, isLoading } = useFetchResource<Skill[]>("/skills");
 
-  if (isLoading) {
-      return <Loader />;
-  }
-
   return (
     <section className={style.wrapper}>
       <h2 className={style.title} id='skill'>
         My skills
       </h2>
-      <section className={style.cardBlock}>
-          {
-              Array.isArray(data)
-                  ? data.map((item:Skill, index:number) => (
-                        <SkillCard icon={item} idx={index} />
-          ))
-                 : []
-          }
-      </section>
+          { isLoading && <Loader /> }
+          <section className={style.cardBlock}>
+              {
+                  Array.isArray(data)
+                      ? data.map((item:Skill, index:number) => (
+                            <SkillCard icon={item} idx={index} />
+              ))
+                     : []
+              }
+          </section>
     </section>
   );
 };
