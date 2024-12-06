@@ -4,6 +4,11 @@ interface Contact {
   value: string;
 }
 
+interface Date<T> {
+  date: T[];
+  status: string;
+}
+
 interface Card {
   _id?: string;
   title: string;
