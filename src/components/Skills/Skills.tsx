@@ -18,9 +18,13 @@ const Skills: FC = () => {
         My skills
       </h2>
       <section className={style.cardBlock}>
-          {data?.map((item:Skill, index:number) => (
-              <SkillCard icon={item} idx={index} />
-          )) || []}
+          {
+              Array.isArray(data)
+                  ? data.map((item:Skill, index:number) => (
+                        <SkillCard icon={item} idx={index} />
+          ))
+                 : []
+          }
       </section>
     </section>
   );
