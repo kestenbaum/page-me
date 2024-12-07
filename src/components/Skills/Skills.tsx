@@ -17,7 +17,7 @@ const Skills: FC = () => {
       </h2>
           { isLoading && <Loader /> }
           { isError && <span>{error?.message}</span>}
-          <section className={style.cardBlock}>
+          <section className={style.cards}>
               { skillsList }
           </section>
     </section>

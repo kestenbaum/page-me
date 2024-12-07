@@ -22,5 +22,9 @@ type ApiResponse<T> = {
   status: number | string;
 };
 
+type SkillCardProps = {
+  item: SkillItem;
+  idx: number;
+}
 
 
