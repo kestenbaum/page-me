@@ -6,7 +6,7 @@ import style from "./RenderSection.module.css";
 
 type RenderSectionProps = {
     title: string;
-    data: Card[];
+    data: WorkItem[];
     filterCategory: string;
     isLoading: boolean;
 }

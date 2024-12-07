@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import style from "@/components/Skills/Skills.module.css";
 
 type SkillCardProps = {
-    icon: Skill;
+    icon: SkillItem;
     idx: number;
 }
 

@@ -17,10 +17,5 @@ type SkillItem = {
   img: string;
 }
 
-interface Date<T> {
-  date: T[];
-  status: string;
-}
-
 
 
