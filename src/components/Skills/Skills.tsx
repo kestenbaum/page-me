@@ -6,7 +6,7 @@ import useFetchResource from "../../hooks/useFetchResource";
 import style from './Skills.module.css';
 
 const Skills: FC = () => {
-  const { data, isLoading } = useFetchResource<Skill[]>("/skills");
+  const { data, isLoading } = useFetchResource<SkillItem[]>("/skills");
 
   return (
     <section className={style.wrapper}>
@@ -17,7 +17,7 @@ const Skills: FC = () => {
           <section className={style.cardBlock}>
               {
                   Array.isArray(data)
-                      ? data.map((item:Skill, index:number) => (
+                      ? data.map((item:SkillItem, index:number) => (
                             <SkillCard icon={item} idx={index} />
               ))
                      : []

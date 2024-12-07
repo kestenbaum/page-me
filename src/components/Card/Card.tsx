@@ -3,7 +3,7 @@ import { Button } from '../UI/Button/Button';
 
 import style from './Card.module.css';
 
-const Card: FC<Card> = ({ link, img, title }) => {
+const Card: FC<WorkItem> = ({ link, img, title }) => {
   return (
     <div className={style.card}>
       <h2 className={style.title}>{title}</h2>

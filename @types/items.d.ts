@@ -1,10 +1,10 @@
-interface Contact {
+type ContactItem = {
   _id?: string;
   title: string;
   value: string;
 }
 
-interface Card {
+type WorkItem = {
   _id?: string;
   title: string;
   img: string;
@@ -12,9 +12,15 @@ interface Card {
   link: string;
 }
 
-interface Skill {
+type SkillItem = {
   title: string;
   img: string;
 }
+
+interface Date<T> {
+  date: T[];
+  status: string;
+}
+
 
 

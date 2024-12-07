@@ -26,6 +26,6 @@
   },
   "include": [
     "src",
-    "@types/api.d.ts"
+    "@types/items.d.ts"
   ]
 }
