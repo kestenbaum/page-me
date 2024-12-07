@@ -1,4 +1,5 @@
 import { FC } from "react";
+import { renderItemsList } from "@/helpers";
 import SkillCard from "@/components/Skills/SkillCard/SkillCard";
 import Loader from '../UI/Loader/Loader';
 import useFetchResource from "../../hooks/useFetchResource";
@@ -6,7 +7,8 @@ import useFetchResource from "../../hooks/useFetchResource";
 import style from './Skills.module.css';
 
 const Skills: FC = () => {
-  const { data, isLoading } = useFetchResource<SkillItem[]>("/skills");
+  const { data, isLoading, isError, error } = useFetchResource<SkillItem[]>("/skills");
+  const skillsList = renderItemsList(data?.data, SkillCard);
 
   return (
     <section className={style.wrapper}>
@@ -14,14 +16,9 @@ const Skills: FC = () => {
         My skills
       </h2>
           { isLoading && <Loader /> }
+          { isError && <span>{error?.message}</span>}
           <section className={style.cardBlock}>
-              {
-                  Array.isArray(data)
-                      ? data.map((item:SkillItem, index:number) => (
-                            <SkillCard icon={item} idx={index} />
-              ))
-                     : []
-              }
+              { skillsList }
           </section>
     </section>
   );

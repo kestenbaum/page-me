@@ -17,5 +17,10 @@ type SkillItem = {
   img: string;
 }
 
+type ApiResponse<T> = {
+  data: T;
+  status: number | string;
+};
+
 
 

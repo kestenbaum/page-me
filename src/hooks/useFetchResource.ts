@@ -1,30 +1,19 @@
+import { AxiosResponse } from "axios";
 import { useQuery } from "react-query";
 import { api } from "@/api/instance";
 
 
 //todo update style for works/contact/skills
-//todo update components Contact/Skills write function for map
-
 
 const useFetchResource = <T>(url: string, category?: string) => {
-    const { data, isLoading, isError, error, status } = useQuery<{ data: T; status: string | number}, Error>({
+    const { data, isLoading, isError, error, status } = useQuery<ApiResponse<T>, Error>({
         queryKey: category ? [url, category] : [url],
-        queryFn: async () => {
-            try {
-                const response = await api.get(url);
-                return {
-                    data: response.data.data,
-                    status: response.data.status,
-                };
-            } catch (error) {
-                if (error instanceof Error) {
-                    throw new Error(
-                        error.message || "Error fetching resource",
-                    );
-                } else {
-                    throw new Error("Error unknown");
-                }
-            }
+        queryFn: async ():Promise<ApiResponse<T>> => {
+            const response:AxiosResponse<ApiResponse<T>> = await api.get(url);
+            return {
+                data: response.data.data,
+                status: response.data.status,
+            };
         },
         onError: (err: Error) => {
             console.error("Error fetching resource:", err);
