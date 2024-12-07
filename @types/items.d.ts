@@ -27,4 +27,11 @@ type SkillCardProps = {
   idx: number;
 }
 
+type RenderSectionProps = {
+  title: string;
+  data: WorkItem[];
+  filterCategory: string;
+  isLoading: boolean;
+}
+
 
