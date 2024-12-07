@@ -8,7 +8,7 @@ import style from './Works.module.css';
 
 
 const Works: FC = () => {
-    const { data, isLoading } = useFetchResource<Card[]>("/works", "works");
+    const { data, isLoading } = useFetchResource<WorkItem[]>("/works", "works");
     const htmlData = filterCards(data, "web");
     const reactData = filterCards(data, "react");
 

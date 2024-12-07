@@ -15,7 +15,7 @@ const Contact: FC = () => {
                 {isLoading ? (
                     <Loader/>
                 ) : (
-                    !Array.isArray(data) ? [] : data.map((item: Contact, idx: number) => (
+                    !Array.isArray(data) ? [] : data.map((item: ContactItem, idx: number) => (
                         <div
                             key={idx}
                             className={style.wrapper}
