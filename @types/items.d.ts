@@ -17,10 +17,21 @@ type SkillItem = {
   img: string;
 }
 
-interface Date<T> {
-  date: T[];
-  status: string;
+type ApiResponse<T> = {
+  data: T;
+  status: number | string;
+};
+
+type SkillCardProps = {
+  item: SkillItem;
+  idx: number;
 }
 
+type RenderSectionProps = {
+  title: string;
+  data: WorkItem[];
+  filterCategory: string;
+  isLoading: boolean;
+}
 
 

@@ -9,8 +9,8 @@ import style from './Works.module.css';
 
 const Works: FC = () => {
     const { data, isLoading } = useFetchResource<WorkItem[]>("/works", "works");
-    const htmlData = filterCards(data, "web");
-    const reactData = filterCards(data, "react");
+    const htmlData = filterCards(data?.data, "web");
+    const reactData = filterCards(data?.data, "react");
 
     return (
         <section className={style.wrapper} id="work">

@@ -1,17 +1,13 @@
 import React, { FC } from 'react';
-import style from "@/components/Skills/Skills.module.css";
 
-type SkillCardProps = {
-    icon: Skill;
-    idx: number;
-}
+import style from "./SkillsCard.module.css";
 
-const SkillCard: FC<SkillCardProps> = ({ icon, idx }) => {
+const SkillCard: FC<SkillCardProps> = ({ item, idx }) => {
     return (
         <div className={style.col} key={idx}>
-            <div className={style.cardWrapper}>
-                <img className={style.cardIcon} src={process.env.PUBLIC_URL + icon.img} alt='icon'/>
-                <h2 className={style.title}>{icon.title}</h2>
+            <div className={style.wrapper}>
+                <img className={style.icon} src={process.env.PUBLIC_URL + item.img} alt='icon'/>
+                <h2 className={style.title}>{item.title}</h2>
             </div>
         </div>
     );
