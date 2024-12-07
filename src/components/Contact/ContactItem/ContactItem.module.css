@@ -1,0 +1,23 @@
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 15px 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border: 2px solid rgba(80, 80, 80, 0.5);
+    background: #161b22;
+}
+
+.title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 16px;
+    color: #fff;
+}
+
+.wrapper:hover {
+    cursor: pointer;
+    scale: 1.01;
+    transition: scale 0.1s;
+}
+

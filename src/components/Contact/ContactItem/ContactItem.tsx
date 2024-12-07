@@ -1,5 +1,6 @@
 import React from 'react';
-import style from "@/components/Contact/Contact.module.css";
+
+import style from "./ContactItem.module.css";
 
 const ContactItem = ({ item, idx}: {item:ContactItem, idx:number | string }) => {
     return (
