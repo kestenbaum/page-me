@@ -7,7 +7,12 @@ const Card: FC<WorkItem> = ({ link, img, title }) => {
   return (
     <div className={style.card}>
       <h2 className={style.title}>{title}</h2>
-      <img src={img} className={style.img} alt={'Image for card'} />
+      <div
+          className={style.wrapper}
+          style={{ backgroundImage: `url(${img})` }}
+      >
+        <img src={img} className={style.img} alt={'Image for card'} />
+      </div>
       <a href={link} target='_blank' rel='noreferrer'>
         <Button>Link to project</Button>
       </a>

@@ -6,11 +6,21 @@
   letter-spacing: 0.2rem;
 }
 
-.img {
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
   width: 100%;
+  background-color: #fff;
+}
+
+.img {
+  object-fit: contain;
   height: 100%;
-  max-width: 250px;
-  max-height: 200px;
+  width: 100%;
+  backdrop-filter: blur(5px);
+  filter: drop-shadow(0 0 60px rgba(66, 68, 110, 0.5));
 }
 
 .card {
