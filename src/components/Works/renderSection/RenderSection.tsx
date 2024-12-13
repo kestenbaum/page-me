@@ -8,19 +8,19 @@ import style from "./RenderSection.module.css";
 const RenderSection: FC<RenderSectionProps> = ({ title, data, filterCategory, isLoading }) => {
     return (
         <section>
-            <h3 className={style.title__section}>{title}</h3>
-            <div className={style.block}>
-                { isLoading && <Loader /> }
+            <h3 className={style.title}>{title}</h3>
+            { isLoading && <Loader /> }
+            <div className={style.wrapper}>
                 { data
-                        ?.filter((item) => item.category === filterCategory)
-                        ?.map((item) => (
-                            <Card
-                                key={item._id}
-                                img={item.img}
-                                link={item.link}
-                                title={item.title}
-                            />
-                        ))
+                    ?.filter((item) => item.category === filterCategory)
+                    ?.map((item) => (
+                        <Card
+                            key={item._id}
+                            img={item.img}
+                            link={item.link}
+                            title={item.title}
+                        />
+                    ))
                 }
             </div>
         </section>
