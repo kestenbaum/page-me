@@ -3,8 +3,6 @@ import { useQuery } from "react-query";
 import { api } from "@/api/instance";
 
 
-//todo update style for works/contact/skills
-
 const useFetchResource = <T>(url: string, category?: string) => {
     const { data, isLoading, isError, error, status } = useQuery<ApiResponse<T>, Error>({
         queryKey: category ? [url, category] : [url],
