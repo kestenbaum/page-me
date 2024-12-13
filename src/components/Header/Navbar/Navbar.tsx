@@ -1,4 +1,4 @@
-import { FC, useState } from 'react';
+import {FC, useEffect, useState} from 'react';
 import { Link } from 'react-scroll';
 
 import style from './Navbar.module.css';
@@ -37,6 +37,18 @@ const Navbar: FC = () => {
         setIsOpen(prev => !prev)
     }
 
+    useEffect(() => {
+        if (isOpen) {
+            document.body.classList.add(style.bodyNoScroll);
+        } else {
+            document.body.classList.remove(style.bodyNoScroll);
+        }
+
+        return () => {
+            document.body.classList.remove(style.bodyNoScroll);
+        }
+    }, [isOpen])
+
     return (
         <>
             <menu className={!isOpen ? style.list : style.active}>
@@ -55,7 +67,12 @@ const Navbar: FC = () => {
                 <span className={style.link}>{element.link}</span>
               </Link>)}
             </menu>
-            <button className={style.burger} onClick={handleClickOpen}></button>
+            <button
+               onClick={handleClickOpen}
+               className={style.burger}
+            >
+                <span className={style.burgerMenu}></span>
+            </button>
         </>
     );
 };
