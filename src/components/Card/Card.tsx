@@ -5,7 +5,7 @@ import style from './Card.module.css';
 
 const Card: FC<WorkItem> = ({ link, img, title }) => {
   return (
-    <div className={style.card}>
+    <li className={style.card}>
       <h2 className={style.title}>{title}</h2>
       <div
           className={style.wrapper}
@@ -16,7 +16,7 @@ const Card: FC<WorkItem> = ({ link, img, title }) => {
       <a href={link} target='_blank' rel='noreferrer'>
         <Button>Link to project</Button>
       </a>
-    </div>
+    </li>
   );
 };
 

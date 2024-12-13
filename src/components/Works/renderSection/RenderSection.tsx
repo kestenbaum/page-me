@@ -10,7 +10,7 @@ const RenderSection: FC<RenderSectionProps> = ({ title, data, filterCategory, is
         <section>
             <h3 className={style.title}>{title}</h3>
             { isLoading && <Loader /> }
-            <div className={style.wrapper}>
+            <ul className={style.wrapper}>
                 { data
                     ?.filter((item) => item.category === filterCategory)
                     ?.map((item) => (
@@ -22,7 +22,7 @@ const RenderSection: FC<RenderSectionProps> = ({ title, data, filterCategory, is
                         />
                     ))
                 }
-            </div>
+            </ul>
         </section>
     );
 }
