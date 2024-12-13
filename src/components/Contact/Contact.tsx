@@ -12,14 +12,14 @@ const Contact: FC = () => {
     const contactList = renderItemsList(data?.data, ContactItem);
 
     return (
-        <section className={style.wrapper} id='contact'>
-            <>
+        <div className={style.wrapper} id='contact'>
                 <h2 className={style.title}>Contact</h2>
                 { isLoading && <Loader /> }
-                { contactList }
+                <ul className={style.list}>
+                    { contactList }
+                </ul>
                 { isError && <p>{error?.message}</p> }
-            </>
-        </section>
+        </div>
     );
 };
 
