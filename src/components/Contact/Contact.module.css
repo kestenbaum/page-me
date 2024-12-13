@@ -12,3 +12,9 @@
   font-weight: normal;
   letter-spacing: 0.2rem;
 }
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
