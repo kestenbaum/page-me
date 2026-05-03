@@ -1,31 +1,31 @@
 .section {
-    padding: 100px 0;
-    min-height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  padding: 100px 0;
+  min-height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .title {
-    font-family: 'Oswald', sans-serif;
-    font-size: clamp(30px, 4vw, 48px);
-    text-transform: uppercase;
-    color: #fff;
-    margin-bottom: 50px;
-    position: relative;
-    display: inline-block;
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(30px, 4vw, 48px);
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 50px;
+  position: relative;
+  display: inline-block;
 }
 
 .title::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -10px;
-    width: 50px;
-    height: 4px;
-    background: #007bff;
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 50px;
+  height: 4px;
+  background: #007bff;
 }
 
 .content {
-    width: 100%;
+  width: 100%;
 }

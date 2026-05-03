@@ -1,11 +1,21 @@
 module.exports = {
     printWidth: 100,
-    trailingComma: 'none',
     tabWidth: 2,
+    useTabs: false,
     semi: true,
     singleQuote: true,
-    jsxSingleQuote: true,
-    arrowParens: 'always',
-    useTabs: false,
-    plugins: []
+    trailingComma: 'es5',
+    bracketSpacing: true,
+    endOfLine: 'auto',
+    plugins: ['@trivago/prettier-plugin-sort-imports'],
+    importOrder: [
+        '^react',
+        '^@emailjs/(.*)$',
+        '<THIRD_PARTY_MODULES>',
+        '^../(.*)',
+        '^./(.*)',
+        '\\.css$',
+    ],
+    importOrderSeparation: true,
+    importOrderSortSpecifiers: true,
 };
