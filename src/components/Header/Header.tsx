@@ -15,14 +15,17 @@ const Header: FC = () => {
     }, []);
 
     return (
-        <header className={`${style.header} ${isScrolled ? style.scrolled : ''}`}>
-            <div className={style.container}>
-                <div className={style.wrapper}>
-                    <Logo>Oleksii Vovnenko</Logo>
-                    <Navbar />
+        <>
+            <header className={`${style.header} ${isScrolled ? style.scrolled : ''}`}>
+                <div className={style.container}>
+                    <div className={style.wrapper}>
+                        <Logo>Oleksii Vovnenko</Logo>
+                        <Navbar />
+                    </div>
                 </div>
-            </div>
-        </header>
+            </header>
+            <div className={style.headerPlaceholder} />
+        </>
     );
 };
 
