@@ -18,3 +18,6 @@ This is my personal portfolio built using **React**, **TypeScript**, **Styled-Co
 - **Interactive UI**: Various components are styled using **Styled-Components** to provide a modern, responsive user interface.
 - **Dynamic Data Fetching**: React Query is used to fetch data dynamically from an API (for example, a list of skills, projects, etc.).
 - **Lightweight and Fast**: Optimized performance to ensure smooth user experience.
+
+## Live
+https://portfolio-react-app-ivory.vercel.app/
