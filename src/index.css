@@ -10,13 +10,6 @@
   background-color: #0d1117;
 }
 
-.container {
-  width: 100%;
-  max-width: 1024px;
-  padding: 0 15px;
-  margin: 0 auto;
-}
-
 a {
   text-decoration: none;
 }
