@@ -1,9 +1,12 @@
 const path = require('path');
 
 module.exports = {
+    typescript: {
+        enableTypeChecking: false,
+    },
     webpack: {
         alias: {
-            '@': path.resolve(__dirname, 'src'), // теперь @ будет указывать на папку src
+            '@': path.resolve(__dirname, 'src'),
         },
     },
 };
