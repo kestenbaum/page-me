@@ -2,6 +2,7 @@ import React, { FC } from 'react';
 import Section from "@/components/UI/Section/Section";
 import style from './Portfolio.module.css';
 import PortfolioCard from "@/components/Portfolio/PortfolioCard/PortfolioCard";
+import { useTranslation } from "react-i18next";
 
 
 const Portfolio_DATA = [
@@ -36,8 +37,10 @@ const Portfolio_DATA = [
 ];
 
 const Portfolio: FC = () => {
+    const { t } = useTranslation();
+
     return (
-        <Section id="portfolio" title={"My Portfolio"}>
+        <Section id="portfolio" title={t('title.portfolio')}>
             <div className={style.grid}>
                 {Portfolio_DATA.map(skill => (
                     <PortfolioCard

@@ -24,6 +24,24 @@ i18n
                             "I specialize in HTML, CSS, and JavaScript, with a solid understanding of web hosting and infrastructure. I approach complex challenges with an analytical mindset, ensuring clear and efficient solutions while maintaining a professional and friendly partnership with my clients.",
                             "You can rely on me for honest communication and high-quality digital services."
                         ]
+                    },
+                    docs: {
+                        cv: "Resume",
+                        certifications: "Certifications",
+                    },
+                    title: {
+                        skills: "Skills",
+                        portfolio: "My Portfolio"
+                    },
+                    contact: {
+                        title: "Get In Touch",
+                        details: "Contact Details",
+                        description: "I am currently open to new opportunities and collaborations. Feel free to reach out via any of the channels below!",
+                        form: {
+                            title: "Let's create something amazing together.",
+                            description: "Available for freelance and full-time positions.",
+                            button: "Send a Message",
+                        }
                     }
                 }
             },
@@ -43,6 +61,24 @@ i18n
                             "Ich spezialisiere mich auf HTML, CSS und JavaScript und verfüge über ein solides Verständnis von Webhosting und Infrastruktur. Komplexe Herausforderungen gehe ich analytisch an und sorge für klare, effiziente Lösungen, während ich gleichzeitig eine professionelle und partnerschaftliche Zusammenarbeit mit meinen Kundinnen und Kunden pflege.",
                             "Sie können sich auf ehrliche und professionelle Dienstleistungen verlassen."
                         ]
+                    },
+                    docs: {
+                        cv: "Lebenslauf",
+                        certifications: "Zertifizierungen",
+                    },
+                    title: {
+                        skills: "Fähigkeiten",
+                        portfolio: "Mein Portfolio"
+                    },
+                    contact: {
+                        title: "Kontakt",
+                        details: "Kontaktdaten",
+                        description: "Ich bin derzeit offen für neue Möglichkeiten und Kooperationen. Kontaktieren Sie mich gerne über einen der unten genannten Kanäle!",
+                        form: {
+                            title: "Lassen Sie uns gemeinsam etwas Großartiges schaffen.",
+                            description: "Verfügbar für Freelance-Projekte und Vollzeitpositionen.",
+                            button: "Nachricht senden",
+                        }
                     }
                 }
             }

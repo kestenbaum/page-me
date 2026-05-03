@@ -1,12 +1,14 @@
 import { FC } from 'react';
 import Section from '../UI/Section/Section';
 import style from './Skills.module.css';
+import { useTranslation } from "react-i18next";
+
 
 const SKILLS_CATEGORIES = [
     {
         title: "Frontend",
         skills: ["HTML", "CSS", "JavaScript", "TypeScript", "React", "Next.js"],
-        color: "#007bff"
+        color: "#007bff",
     },
     {
         title: "Backend",
@@ -21,8 +23,10 @@ const SKILLS_CATEGORIES = [
 ];
 
 const Skills: FC = () => {
+    const { t } = useTranslation();
+
     return (
-        <Section id="skill" title="Tech Stack">
+        <Section id="skill" title={t('title.skills')}>
             <div className={style.grid}>
                 {SKILLS_CATEGORIES.map((cat, idx) => (
                     <div key={idx} className={style.categoryCard}>

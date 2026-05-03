@@ -14,9 +14,9 @@ const Documents: FC = () => {
         },
         {
             id: 2,
-            label: t('docs.certs'),
+            label: t('docs.certifications'),
             path: '/documents/all_docs.pdf',
-            icon: '🎓'
+            icon: '🎓',
         }
     ];
 

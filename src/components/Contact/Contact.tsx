@@ -2,6 +2,7 @@ import { FC } from 'react';
 import Section from '../UI/Section/Section';
 import style from './Contact.module.css';
 import { FiMail, FiPhone, FiLinkedin, FiMapPin } from 'react-icons/fi';
+import { useTranslation } from "react-i18next";
 
 const MailIcon = FiMail as any;
 const PhoneIcon = FiPhone as any;
@@ -9,14 +10,15 @@ const LinkedinIcon = FiLinkedin as any;
 const MapPinIcon = FiMapPin as any;
 
 const Contact: FC = () => {
+    const { t } = useTranslation();
+
     return (
-        <Section id="contact" title="Get In Touch">
+        <Section id="contact" title={t('contact.title')}>
             <div className={style.wrapper}>
                 <div className={style.info}>
-                    <h3 className={style.subtitle}>Contact Details</h3>
+                    <h3 className={style.subtitle}>{t('contact.details')}</h3>
                     <p className={style.text}>
-                        I am currently open to new opportunities and collaborations.
-                        Feel free to reach out via any of the channels below!
+                        {t('contact.description')}
                     </p>
 
                     <div className={style.contactList}>
@@ -31,7 +33,7 @@ const Contact: FC = () => {
                         <a href="tel:+4915111072552" className={style.contactItem}>
                             <div className={style.icon}><PhoneIcon /></div>
                             <div>
-                                <span>Phone</span>
+                                <span>{t('contact.phone', 'Phone')}</span>
                                 <p>+49 151 11072552</p>
                             </div>
                         </a>
@@ -47,7 +49,7 @@ const Contact: FC = () => {
                         <div className={style.contactItem}>
                             <div className={style.icon}><MapPinIcon /></div>
                             <div>
-                                <span>Location</span>
+                                <span>{t('contact.location', 'Location')}</span>
                                 <p>Bahnhofstraße 7, 53567 Asbach, Germany</p>
                             </div>
                         </div>
@@ -56,10 +58,10 @@ const Contact: FC = () => {
 
                 <div className={style.actionBox}>
                     <div className={style.card}>
-                        <h4>Let's create something amazing together.</h4>
-                        <p>Available for freelance and full-time positions.</p>
+                        <h4>{t('contact.form.title')}</h4>
+                        <p>{t('contact.form.description')}</p>
                         <a href="mailto:vovnenkooleksii@gmail.com" className={style.mainBtn}>
-                            Send a Message
+                            {t('contact.form.button')}
                         </a>
                     </div>
                 </div>
