@@ -3,8 +3,7 @@ import { useTranslation } from 'react-i18next';
 import style from './Documents.module.css';
 
 const Documents: FC = () => {
-    const { t, i18n } = useTranslation();
-    const isDe = i18n.language === 'de';
+    const { t } = useTranslation();
 
     const docs = [
         {
