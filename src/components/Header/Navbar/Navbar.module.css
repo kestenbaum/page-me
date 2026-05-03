@@ -11,11 +11,23 @@
   transition: color 0.3s ease;
 }
 
+.nav {
+  display: flex;
+}
+
+.burger {
+  display: none;
+}
+
 .item:hover, .activeLink {
   color: #007bff;
 }
 
 @media (max-width: 768px) {
+  .list {
+    flex-direction: column;
+  }
+
   .nav {
     position: fixed;
     top: 0;
@@ -27,16 +39,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
   }
 
   .nav.active {
     right: 0;
-  }
-
-  .list {
-    flex-direction: column;
-    align-items: center;
-    gap: 40px;
   }
 
   .burger {
@@ -66,5 +73,113 @@
 
   .burgerOpen .burgerLine { background: transparent; }
   .burgerOpen .burgerLine::before { transform: rotate(45deg); top: 0; }
+
+  .list {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .langContainer {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-left: 10px; /* Отступ от последнего пункта меню */
+    padding-left: 20px;
+    border-left: 1px solid rgba(255, 255, 255, 0.2); /* Тонкая разделительная линия */
+  }
+
+  .langBtn {
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+    font-family: 'Oswald', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    transition: 0.3s;
+    padding: 5px;
+  }
+
+  .langBtn:hover {
+    color: #fff;
+  }
+
+  .langActive {
+    color: #007bff; /* Твой синий акцент */
+    font-weight: 700;
+  }
+
+  .divider {
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 12px;
+  }
+
+  @media (max-width: 768px) {
+    .langContainer {
+      margin-left: 0;
+      padding-left: 0;
+      border-left: none;
+      margin-top: 20px;
+    }
+
+    .langBtn {
+      font-size: 18px;
+    }
+  }
   .burgerOpen .burgerLine::after { transform: rotate(-45deg); top: 0; }
+}
+
+.list {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.langContainer {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-left: 10px;
+  padding-left: 20px;
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.langBtn {
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  font-family: 'Oswald', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  transition: 0.3s;
+  padding: 5px;
+}
+
+.langBtn:hover {
+  color: #fff;
+}
+
+.langActive {
+  color: #007bff;
+  font-weight: 700;
+}
+
+.divider {
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 12px;
+}
+
+@media (max-width: 768px) {
+  .langContainer {
+    margin-left: 0;
+    padding-left: 0;
+    border-left: none;
+    margin-top: 20px;
+  }
+
+  .langBtn {
+    font-size: 18px;
+  }
 }

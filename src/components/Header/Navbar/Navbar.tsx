@@ -1,16 +1,22 @@
 import { FC, useEffect, useState } from 'react';
 import { Link } from 'react-scroll';
 import style from './Navbar.module.css';
+import { useTranslation } from "react-i18next";
 
 const HEADER_MENU = [
-    { id: 1, to: "home", link: "Home" },
-    { id: 2, to: "skill", link: "Skills" },
-    { id: 3, to: "portfolio", link: "Portfolio" },
-    { id: 4, to: "contact", link: "Contact" }
+    { id: 1, to: "home", key: "nav.home" },
+    { id: 2, to: "skill", key: "nav.skills" },
+    { id: 3, to: "portfolio", key: "nav.works" },
+    { id: 4, to: "contact", key: "nav.contact" }
 ];
 
 const Navbar: FC = () => {
     const [isOpen, setIsOpen] = useState(false);
+    const { i18n, t } = useTranslation();
+
+    const changeLanguage = (lng: string) => {
+        i18n.changeLanguage(lng);
+    };
 
     const toggleMenu = () => setIsOpen(!isOpen);
 
@@ -23,7 +29,7 @@ const Navbar: FC = () => {
         <>
             <nav className={`${style.nav} ${isOpen ? style.active : ''}`}>
                 <div className={style.list}>
-                    {HEADER_MENU.map(({ id, to, link }) => (
+                    {HEADER_MENU.map(({ id, to, key }) => (
                         <Link
                             key={id}
                             to={to}
@@ -35,9 +41,24 @@ const Navbar: FC = () => {
                             activeClass={style.activeLink}
                             onClick={() => setIsOpen(false)}
                         >
-                            <span className={style.link}>{link}</span>
+                            <span className={style.link}>{t(key)}</span>
                         </Link>
                     ))}
+                </div>
+                <div className={style.langContainer}>
+                    <button
+                        className={`${style.langBtn} ${i18n.language === 'en' ? style.langActive : ''}`}
+                        onClick={() => changeLanguage('en')}
+                    >
+                        EN
+                    </button>
+                    <span className={style.divider}>/</span>
+                    <button
+                        className={`${style.langBtn} ${i18n.language === 'de' ? style.langActive : ''}`}
+                        onClick={() => changeLanguage('de')}
+                    >
+                        DE
+                    </button>
                 </div>
             </nav>
 
