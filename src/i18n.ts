@@ -41,6 +41,8 @@ i18n
                             title: "Let's create something amazing together.",
                             description: "Available for freelance and full-time positions.",
                             button: "Send a Message",
+                            success: "Thank you! Your message has been sent.",
+                            error: "Something went wrong...."
                         }
                     }
                 }
@@ -78,6 +80,8 @@ i18n
                             title: "Lassen Sie uns gemeinsam etwas Großartiges schaffen.",
                             description: "Verfügbar für Freelance-Projekte und Vollzeitpositionen.",
                             button: "Nachricht senden",
+                            success: "Danke! Ihre Nachricht wurde gesendet.",
+                            error: "Etwas ist schief gelaufen..."
                         }
                     }
                 }

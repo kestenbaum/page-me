@@ -98,6 +98,7 @@ a.contactItem:hover .icon {
   font-family: 'Oswald', sans-serif;
   text-transform: uppercase;
   transition: 0.3s;
+  cursor: pointer;
 }
 
 .mainBtn:hover {
