@@ -1,27 +1,46 @@
-import { FC } from "react";
-import { renderItemsList } from "@/helpers";
-import SkillCard from "@/components/Skills/SkillCard/SkillCard";
-import Loader from '../UI/Loader/Loader';
-import useFetchResource from "../../hooks/useFetchResource";
-
+import { FC } from 'react';
+import Section from '../UI/Section/Section';
 import style from './Skills.module.css';
 
-const Skills: FC = () => {
-  const { data, isLoading, isError, error } = useFetchResource<SkillItem[]>("/skills");
-  const skillsList = renderItemsList(data?.data, SkillCard);
+const SKILLS_CATEGORIES = [
+    {
+        title: "Frontend",
+        skills: ["HTML", "CSS", "JavaScript", "TypeScript", "React", "Next.js"],
+        color: "#007bff"
+    },
+    {
+        title: "Backend",
+        skills: ["Node.js", "Express.js", "Nest.js", "MySQL", "PostgreSQL"],
+        color: "#28a745"
+    },
+    {
+        title: "Methods & Tools",
+        skills: ["Git", "Jira", "Docker", "Postman", "WebStorm", "VS Code", "Figma"],
+        color: "#ffc107"
+    }
+];
 
-  return (
-    <section className={style.wrapper}>
-      <h2 className={style.title} id='skill'>
-        My skills
-      </h2>
-          { isLoading && <Loader /> }
-          { isError && <span>{error?.message}</span>}
-          <section className={style.cards}>
-              { skillsList }
-          </section>
-    </section>
-  );
+const Skills: FC = () => {
+    return (
+        <Section id="skill" title="Tech Stack">
+            <div className={style.grid}>
+                {SKILLS_CATEGORIES.map((cat, idx) => (
+                    <div key={idx} className={style.categoryCard}>
+                        <h3 className={style.categoryTitle} style={{ color: cat.color }}>
+                            {cat.title}
+                        </h3>
+                        <div className={style.skillsList}>
+                            {cat.skills.map((skill) => (
+                                <span key={skill} className={style.skillBadge}>
+                  {skill}
+                </span>
+                            ))}
+                        </div>
+                    </div>
+                ))}
+            </div>
+        </Section>
+    );
 };
 
 export default Skills;
