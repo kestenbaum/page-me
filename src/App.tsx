@@ -6,6 +6,7 @@ import Skills from "@/components/Skills/Skills";
 import Contact from "@/components/Contact/Contact";
 import Hero from "@/components/Hero/Hero";
 import { Toaster } from "react-hot-toast";
+import ScrollToTop from "@/components/ScrollToTop/ScrollToTop";
 
 const App = () => {
     const sections = [
@@ -18,6 +19,7 @@ const App = () => {
 
     return <Container>
         {sections}
+        <ScrollToTop />
         <Toaster position="bottom-center" reverseOrder={false} />
     </Container>;
 };
