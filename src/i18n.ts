@@ -61,7 +61,7 @@ i18n
             title: 'Hallo zusammen ,',
             thanks: 'Danke schön.',
             intro: [
-              'Mein Name ist Oleksii. Ich bin Webentwickler aus der Ukraine und habe mehr als 2 Jahre Berufserfahrung. Ich widme mich jedem Projekt mit voller Hingabe, denn die Zufriedenheit der Kundinnen und Kunden steht im Mittelpunkt meiner beruflichen Laufbahn.',
+              'Mein Name ist Oleksii. Ich bin Webentwickler aus der Ukraine und habe mehr als 3 Jahre Berufserfahrung. Ich widme mich jedem Projekt mit voller Hingabe, denn die Zufriedenheit der Kundinnen und Kunden steht im Mittelpunkt meiner beruflichen Laufbahn.',
               'Ich spezialisiere mich auf React, Next, JavaScript and TypeScript und verfüge über ein solides Verständnis von Webhosting und Infrastruktur. Komplexe Herausforderungen gehe ich analytisch an und sorge für klare, effiziente Lösungen, während ich gleichzeitig eine professionelle und partnerschaftliche Zusammenarbeit mit meinen Kundinnen und Kunden pflege.',
               'Sie können sich auf ehrliche und professionelle Dienstleistungen verlassen.',
             ],
